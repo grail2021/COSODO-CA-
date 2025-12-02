@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSODO-CA - Présentation Institutionnelle_2025</title>
+    <meta name="description" content="COSODO-CA : Coopérative Agricole Solidaire du Paysage Ndoubock. Modèle intégré d'agriculture durable et d'économie solidaire au Cameroun.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        :root {
+            --primary-green: #2d6a4f;
+            --secondary-green: #52b788;
+            --accent-gold: #d4a574;
+            --dark-brown: #5a3e2b;
+            --light-bg: #f8f9fa;
+            --text-dark: #1b263b;
+            --text-light: #6c757d;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #2d6a4f 0%, #52b788 100%);
+            --gradient-accent: linear-gradient(135deg, #d4a574 0%, #c9915b 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+        }
+       
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--light-bg);
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+       
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+        }
+       
+        header {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+       
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(255,255,255,0.05)"/></svg>') no-repeat bottom center;
+            background-size: cover;
+            opacity: 0.6;
+        }
+       
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+       
+        .logo-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+       
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+       
+        h1 {
+            font-size: clamp(2em, 5vw, 3.2em);
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.02em;
+        }
+       
+        .subtitle {
+            font-size: clamp(1.1em, 3vw, 1.5em);
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+       
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 0.95em;
+            font-weight: 600;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin: 8px;
+        }
+       
+        .nav-pills {
+            background: var(--white);
+            padding: 20px;
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+       
+        .nav-pill {
+            padding: 10px 20px;
+            background: var(--light-bg);
+            border-radius: 25px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.9em;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+       
+        .nav-pill:hover {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+       
+        section {
+            padding: 60px 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+       
+        section:last-of-type {
+            border-bottom: none;
+        }
+       
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+       
+        .section-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+       
+        h2 {
+            font-size: clamp(2em, 4vw, 2.8em);
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+       
+        .section-intro {
+            font-size: 1.15em;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+       
+        h3 {
+            font-size: clamp(1.5em, 3vw, 1.9em);
+            color: var(--dark-brown);
+            margin: 40px 0 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+       
+        h3::before {
+            content: '';
+            width: 4px;
+            height: 30px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+       
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+       
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+       
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+       
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+       
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+       
+        .card-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+       
+        .card h4 {
+            font-size: 1.35em;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+       
+        .info-box {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-md);
+        }
+       
+        .info-box h3, .info-box h4 {
+            color: var(--white);
+        }
+       
+        .info-box h3::before {
+            background: rgba(255,255,255,0.3);
+        }
+       
+        .warning-box {
+            background: linear-gradient(135deg, #d4a574 0%, #c9915b 100%);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-md);
+        }
+       
+        .warning-box h3, .warning-box h4 {
+            color: var(--white);
+        }
+       
+        .warning-box h3::before {
+            background: rgba(255,255,255,0.3);
+        }
+       
+        .highlight-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+            border-left: 5px solid var(--accent-gold);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+       
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+       
+        .stat-card {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+       
+        .stat-value {
+            font-size: 3em;
+            font-weight: 800;
+            margin: 10px 0;
+            line-height: 1;
+        }
+       
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+       
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+       
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+       
+        th {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95em;
+        }
+       
+        td {
+            padding: 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+       
+        tr:hover {
+            background: #f8f9fa;
+        }
+       
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+       
+        li {
+            margin: 12px 0;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+       
+        li strong {
+            color: var(--text-dark);
+        }
+       
+        .cta-section {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 60px 30px;
+            text-align: center;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+       
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+       
+        .btn {
+            display: inline-block;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+       
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+       
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+       
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+       
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+       
+        footer {
+            background: linear-gradient(135deg, #1b263b 0%, #2d3e50 100%);
+            color: var(--white);
+            padding: 60px 30px 30px;
+            text-align: center;
+        }
+       
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+       
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            text-align: left;
+        }
+       
+        .contact-item {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+       
+        .contact-item h4 {
+            color: var(--secondary-green);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+       
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            transition: color 0.3s;
+        }
+       
+        .contact-item a:hover {
+            color: var(--secondary-green);
+        }
+       
+        @media print {
+            body { background: white; font-size: 12pt; }
+            .container { max-width: 100%; box-shadow: none; }
+            .nav-pills, .cta-buttons, .no-print { display: none !important; }
+            section { page-break-inside: avoid; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+       
+        @media (max-width: 768px) {
+            section { padding: 40px 20px; }
+            .grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo-icon">🌾</div>
+                <h1>COSODO-CA</h1>
+                <div class="subtitle">Coopérative Agricole Solidaire du Paysage Ndoubock</div>
+                <div class="subtitle" style="font-size: 1em; font-weight: 400;">avec Conseil d'Administration</div>
+                <div class="badge">✨ Présentation 2025</div>
+                <div class="badge">🏛️ Conforme Actes Uniformes OHADA</div>
+                <div class="badge">🌍 Plateau Grassfields Méridional</div>
+            </div>
+        </header>
+
+        <nav class="nav-pills no-print">
+            <a href="#identite" class="nav-pill">🏛️ Identité</a>
+            <a href="#territoire" class="nav-pill">🗺️ Territoire</a>
+            <a href="#vision" class="nav-pill">🎯 Vision</a>
+            <a href="#gouvernance" class="nav-pill">⚖️ Gouvernance</a>
+            <a href="#filieres" class="nav-pill">🌱 Filières</a>
+            <a href="#partenaires" class="nav-pill">🤝 Partenaires</a>
+            <a href="#cosodo-hub" class="nav-pill">🚀 COSODO-HUB</a>
+            <a href="#projets" class="nav-pill">💡 Projets Pilotes</a>
+            <a href="#adhesion" class="nav-pill">🤝 Adhésion</a>
+            <a href="#contact" class="nav-pill">📞 Contact</a>
+        </nav>
+
+        <section id="identite">
+            <div class="section-header">
+                <div class="section-icon">🌍</div>
+                <h2>Notre Identité</h2>
+                <p class="section-intro">
+                    Une coopérative agricole solidaire ancrée dans les traditions communautaires des Grassfields,
+                    régie par les standards modernes de gouvernance OHADA
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Fiche d'Identité Institutionnelle</h3>
+                <p style="font-size: 1.1em; line-height: 1.9;">
+                    <strong>COSODO-CA</strong> (Coopérative Agricole Solidaire du Paysage Ndoubock avec Conseil d'Administration)
+                    est une société coopérative constituée le <strong>19 décembre 2024</strong> à Batchingou,
+                    Commune de Bagangté, Région de l'Ouest-Cameroun, sous le haut parrainage de
+                    <strong>Sa Majesté NANA André Flaubert</strong>, Chef Supérieur de Batchingou (12ème dynastie).
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Villages Couvert</div>
+                    <div class="stat-value">30+</div>
+                    <div class="stat-label">Paysage Ndoubock</div>
+                </div>
+                <div class="stat-card" style="background: var(--gradient-accent);">
+                    <div class="stat-label">Producteurs Mobilisés</div>
+                    <div class="stat-value">150+</div>
+                    <div class="stat-label">Pré-adhésions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Altitude Moyenne</div>
+                    <div class="stat-value">1400-1800m</div>
+                    <div class="stat-label">Mont Ndoubock 2100m</div>
+                </div>
+                <div class="stat-card" style="background: var(--gradient-accent);">
+                    <div class="stat-label">Lancement Opérations</div>
+                    <div class="stat-value">2026</div>
+                    <div class="stat-label">Campagne Pilote</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚖️ Cadre Juridique et Réglementaire</h4>
+                <ul>
+                    <li><strong>Acte Uniforme OHADA</strong> relatif au droit des sociétés coopératives (15 décembre 2010)</li>
+                    <li><strong>Loi n°92/006 du 14 août 1992</strong> relative aux sociétés coopératives au Cameroun</li>
+                    <li><strong>Décret n°92/455/PM du 23 novembre 1992</strong> fixant les modalités d'application</li>
+                    <li><strong>Code des Investissements</strong> du Cameroun (avantages fiscaux secteur agricole)</li>
+		     <li><strong>Agréments, Normes & Certifications</strong> Autes ministères techniques, ANOR et standards à l'export selon pays</li>
+                    <li><strong>Cadre ESS et Incubateurs</strong> du MINPEESA (économie sociale et solidaire)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="territoire" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <div class="section-header">
+                <div class="section-icon">🗺️</div>
+                <h2>Paysage Ndoubock : Notre Territoire</h2>
+                <p class="section-intro">
+                    Un plateau des Grassfields méridionaux d'une richesse exceptionnelle, abritant une trentaine de groupements villageois
+                </p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🏔️</div>
+                    <h4>Géographie</h4>
+                    <p><strong>Localisation :</strong> Plateau Grassfields Méridional, Région de l'Ouest-Cameroun</p>
+                    <p><strong>Épicentre :</strong> Batchingou, autour du Mont Ndoubock (2100m d'altitude)</p>
+                    <p><strong>Extension :</strong> Une trentaine de groupements villageois</p>
+                    <p><strong>Relief :</strong> Collines et vallées (1400-1800m), sols volcaniques fertiles</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌦️</div>
+                    <h4>Climat & Potentiel</h4>
+                    <p><strong>Type :</strong> Tropical humide d'altitude</p>
+                    <p><strong>Pluviométrie :</strong> Abondante et bien répartie</p>
+                    <p><strong>Avantages :</strong> Deux saisons de cultures possible, fraîcheur favorable aux cultures maraîchères</p>
+                    <p><strong>Biodiversité :</strong> Riche en espèces végétales endémiques et PFNL</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h4>Contexte Humain</h4>
+                    <p><strong>Population :</strong> Principalement rurale et jeune</p>
+                    <p><strong>Traditions :</strong> Système Nsieuh (tontines de travail rotatif), solidarité communautaire ancestrale</p>
+                    <p><strong>Diaspora :</strong> Importante et engagée</p>
+                    <p><strong>Défis :</strong> Erosion, dégradation de la fertilité des sols, exode rural, pauvreté, accès limité aux marchés, montée de l'individualisme et fragmentation sociale</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏛️</div>
+                    <h4>Gouvernance Territoriale</h4>
+                    <p><strong>Chefferies traditionnelles :</strong> Partenaires naturels (Batchingou, etc.)</p>
+                    <p><strong>Communes :</strong> Collectivités territoriales décentralisées</p>
+                    <p><strong>Structures déconcentrées :</strong> MINADER, MINEPIA, MINEPDED, etc.</p>
+                    <p><strong>Coordination :</strong> Approche participative multi-acteurs</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Stratégie de Déploiement Territorial</h3>
+                <p style="font-size: 1.1em; line-height: 1.9; margin-bottom: 20px;">
+                    COSODO-CA déploie ses activités progressivement depuis son siège social à <strong>Batchingou</strong>,
+                    épicentre du paysage Ndoubock. L'extension vers les autres groupements et villages se fait de manière
+                    organique, en fonction des opportunités, nature des projets et manifestations d'intérêt locales.
+                </p>
+                <ul>
+                    <li><strong>Phase 1 (2025-2026) :</strong> Consolidation à Batchingou et 5 villages immédiatement voisins</li>
+                    <li><strong>Phase 2 (2027-2028) :</strong> Extension à 10 nouveaux groupements selon demandes</li>
+                    <li><strong>Phase 3 (2029-2030) :</strong> Couverture progressive de l'ensemble du paysage (30 villages)</li>
+                    <li><strong>Critères d'extension :</strong> Volonté communautaire, présence de leaders, viabilité économique</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="vision">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2>Vision & Mission</h2>
+                <p class="section-intro">
+                    Transformer le paysage Ndoubock en un modèle de développement territorial durable et solidaire
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🔭 Notre Vision à l'Horizon 2030</h3>
+                <p style="font-size: 1.15em; line-height: 1.9;">
+                    Devenir <strong>la coopérative de référence</strong> du Plateau Grassfields en matière d'agriculture
+                    durable, d'économie solidaire et de développement territorial intégré. Nous aspirons à créer un écosystème
+                    économique prospère où chaque membre bénéficie équitablement des fruits de son travail, tout en préservant
+                    les ressources naturelles et les valeurs culturelles pour les générations futures.
+                </p>
+            </div>
+
+            <h3>🎯 Nos Missions Fondamentales</h3>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h4>Production Durable</h4>
+                    <p>Promouvoir l'agro-écologie, améliorer les rendements, valoriser les savoirs endogènes, développer des filières complètes, des semences certifiées aux produits transformés</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h4>Solidarité Économique</h4>
+                    <p>Mutualiser ressources et moyens, garantir rémunération équitable, développer mécanismes d'entraide (Nsieuh modernisés), microfinancement interne</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h4>Accès aux Marchés</h4>
+                    <p>Créer des débouchés stables, réduire l'intermédiation, développer des circuits courts, participer aux grands salons commerciaux, agro-industriels et événements</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h4>Renforcement Capacités</h4>
+                    <p>Former continuellement, transférer les technologies appropriées, développer l'entrepreneuriat agricole, fermes-écoles, centres de formation</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏭</div>
+                    <h4>Transformation & Valeur Ajoutée</h4>
+                    <p>Développer des unités de transformation locale, créer des produits à forte valeur ajoutée, réduire les pertes post-récolte, s'arrimer à la normalisation ANOR et autres</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h4>Impact Territorial</h4>
+                    <p>Contribuer au développement communautaire, créer des emplois locaux, préserver le patrimoine culturel Ndoubock, promouvoir l'essaimage du modèle</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gouvernance" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <div class="section-header">
+                <div class="section-icon">⚖️</div>
+                <h2>Gouvernance Démocratique</h2>
+                <p class="section-intro">
+                    Une structure conforme OHADA garantissant transparence, participation démocratique et gestion efficace
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Architecture Institutionnelle à Trois Niveaux</h3>
+                <p style="font-size: 1.1em; line-height: 1.9;">
+                    <strong>1. Assemblée Générale</strong> (organe souverain) : Tous les coopérateurs, principe "un membre, une voix"<br>
+                    <strong>2. Conseil d'Administration</strong> (6 membres élus) : Gestion stratégique et opérationnelle<br>
+                    <strong>3. Comité de Surveillance</strong> (3 membres indépendants) : Contrôle et protection des intérêts collectifs
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <h4>📌 Statut Actuel de la Gouvernance</h4>
+                <p style="font-size: 1.05em; line-height: 1.8;">
+                    En attendant l'immatriculation officielle et la tenue de <strong>l'Assemblée Générale Constitutive élargie</strong>,
+                    la coopérative est pilotée par un <strong>Comité d'Initiative transitoire</strong> sous la
+                    coordination de <strong>M. Jean Claude Stone NJOMKAP</strong>, Expert en Développement International et Communautaire.
+                </p>
+            </div>
+        </section>
+
+        <section id="filieres">
+            <div class="section-header">
+                <div class="section-icon">🌾</div>
+                <h2>Filières Agro-Pastorales Intégrées</h2>
+                <p class="section-intro">
+                    Des chaînes de valeur complètes : de la production d'intrants à la distribution finale
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🔗 Approche Chaîne de Valeur Complète</h3>
+                <p style="font-size: 1.1em; line-height: 1.9;">
+                    COSODO-CA développe des <strong>filières intégrées</strong> couvrant l'ensemble de la chaîne de valeur :
+                </p>
+                <ol style="font-size: 1.05em; margin-top: 15px;">
+                    <li><strong>Intrants :</strong> Semences certifiées, fertilisants biologiques, produits phytosanitaires naturels</li>
+                    <li><strong>Production :</strong> Agriculture, élevage, pisciculture, agroforesterie</li>
+                    <li><strong>Post-récolte :</strong> Stockage, séchage, conservation</li>
+                    <li><strong>Transformation :</strong> Unités de transformation agro-alimentaire</li>
+                    <li><strong>Conditionnement :</strong> Packaging professionnel, étiquetage, traçabilité</li>
+                    <li><strong>Commercialisation :</strong> Distribution multicanale (B2C, B2B, export)</li>
+                    <li><strong>Dégustation & Promotion :</strong> Participation aux salons commerciaux, agro-industriels, sportifs, culturels et patrimoniaux</li>
+                </ol>
+            </div>
+
+            <h3>🌱 Filières Cultures Vivrières & Maraîchères à promouvoir (selon études de marché et conventions)</h3>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🥔</div>
+                    <h4>Pommes de Terre</h4>
+                    <p><strong>Semences :</strong> Variétés adaptées altitude (Diamant, Sipiera)</p>
+                    <p><strong>Production :</strong> 1ha pilote Batchingou, rendement 20-25 T/ha</p>
+                    <p><strong>Transformation :</strong> Chips, frites surgelées</p>
+                    <p><strong>Organisation :</strong> Groupe femmes (12-15 membres)</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🍌</div>
+                    <h4>Plantains & Bananes</h4>
+                    <p><strong>Plants :</strong> PIF (Plants Issus de Fragments de tige), rejets sélectionnés</p>
+                    <p><strong>Production :</strong> 2ha (1ha plantains + 1ha bananes, variétés locales)</p>
+                    <p><strong>Transformation :</strong> Farine, chips, bananes séchées</p>
+                    <p><strong>Organisations :</strong> Jeunes (plantains) + Seniors (bananes)</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🍅</div>
+                    <h4>Maraîchage Diversifié</h4>
+                    <p><strong>Cultures :</strong> Tomates, piments, choux, carottes, oignons, gombo</p>
+                    <p><strong>Semences :</strong> Hybrides certifiés + variétés locales améliorées</p>
+                    <p><strong>Production :</strong> Sous serres et plein champ</p>
+                    <p><strong>Débouchés :</strong> Marchés urbains, restaurants, supermarchés</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌽</div>
+                    <h4>Céréales & Légumineuses</h4>
+                    <p><strong>Cultures :</strong> Maïs, haricots, arachides, soja</p>
+                    <p><strong>Semences :</strong> Variétés améliorées IRAD</p>
+                    <p><strong>Transformation :</strong> Farines composées, huiles, tourteaux</p>
+                    <p><strong>Usage :</strong> Alimentation humaine et animale</p>
+                </div>
+            </div>
+
+            <h3>🐔 Filières Élevage</h3>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🐓</div>
+                    <h4>Aviculture (AVI-COSODO)</h4>
+                    <p><strong>Systèmes :</strong> Poulets de chair (cycles 6-8 semaines), poules pondeuses</p>
+                    <p><strong>Modèle :</strong> Nsieuh avicoles rotatifs (3 groupes pilotes)</p>
+                    <p><strong>Capacité :</strong> 1000 poussins/cycle en pré-grossissement (21 jours)</p>
+                    <p><strong>Distribution :</strong> Nsieuh et Familles membres + vente circuits COSODO-HUB</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐷</div>
+                    <h4>Porcs & Petits Ruminants</h4>
+                    <p><strong>Espèces :</strong> Porcs (races locales améliorées), chèvres, moutons</p>
+                    <p><strong>Modèle :</strong> Élevage intégré (valorisation sous-produits agricoles)</p>
+                    <p><strong>Infrastructures :</strong> Porcheries collectives, bergeries</p>
+                    <p><strong>Produits :</strong> Viande fraîche, fumée, charcuterie artisanale</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐟</div>
+                    <h4>Pisciculture Intégrée</h4>
+                    <p><strong>Espèces :</strong> Tilapia, poisson-chat, silure, carpe commune</p>
+                    <p><strong>Systèmes :</strong> Étangs (1600m²), bassins béton, aquaponie</p>
+                    <p><strong>Intégration :</strong> Agro-pisciculture (déjections animales → fertilisation)</p>
+                    <p><strong>Formation :</strong> Centre de formation piscicole (50 participants/an)</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐝</div>
+                    <h4>Apiculture & PFNL</h4>
+                    <p><strong>Produits :</strong> Miel, propolis, cire d'abeille</p>
+                    <p><strong>PFNL :</strong> Njansang, ndjangsa, eru, gingembre, curcuma, ngatchou</p>
+                    <p><strong>Valorisation :</strong> Produits médicinaux, cosmétiques naturels</p>
+                    <p><strong>Conservation :</strong> Biodiversité locale, espèces endémiques</p>
+                </div>
+            </div>
+
+            <h3>🌳 Production d'Intrants</h3>
+            <div class="info-box">
+                <h4>Division Semences & Pépinières</h4>
+                <p style="font-size: 1.05em; line-height: 1.8; margin: 15px 0;">
+                    <strong>Infrastructure :</strong> 3 serres pépinières (200m² chacune), système irrigation goutte-à-goutte,
+                    chambre germination contrôlée, magasin stockage semences climatisé
+                </p>
+		</div>
+        </section>
+
+        <section id="partenaires" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <div class="section-header">
+                <div class="section-icon">🤝</div>
+                <h2>Écosystème Partenarial</h2>
+                <p class="section-intro">
+                    Un réseau multi-acteurs pour le succès du projet
+                </p>
+            </div>
+
+            <h3>🏛️ Partenaires Institutionnels & Techniques</h3>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🌾</div>
+                    <h4>MINADER</h4>
+                    <p><strong>Ministère de l'Agriculture et du Développement Rural</strong></p>
+                    <ul>
+                        <li>Immatriculation et supervision coopérative</li>
+                        <li>Services de vulgarisation agricole</li>
+                        <li>Certification semences et plants</li>
+                        <li>Programmes d'appui (subventions, intrants)</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐄</div>
+                    <h4>MINEPIA</h4>
+                    <p><strong>Ministère de l'Élevage, des Pêches et des Industries Animales</strong></p>
+                    <ul>
+                        <li>Encadrement filières élevage et pisciculture</li>
+                        <li>Services vétérinaires et prophylaxie</li>
+                        <li>Certification sanitaire produits animaux</li>
+                        <li>Formation techniques d'élevage</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h4>MINEPDED</h4>
+                    <p><strong>Ministère de l'Environnement, de la Protection de la Nature et du Développement Durable</strong></p>
+                    <ul>
+                        <li>Certification agriculture biologique</li>
+                        <li>Gestion durable ressources naturelles</li>
+                        <li>Études d'impact environnemental</li>
+                        <li>Valorisation PFNL et biodiversité</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h4>MINPEESA</h4>
+                    <p><strong>Ministère des PME, de l'Économie Sociale et de l'Artisanat</strong></p>
+                    <ul>
+                        <li>Cadre ESS (Économie Sociale et Solidaire)</li>
+                        <li>Incubation et accompagnement entrepreneurial</li>
+                        <li>Accès financements dédiés PME</li>
+                        <li>Formalisation et structuration</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h4>MINRESI & Recherche</h4>
+                    <p><strong>Ministère de la Recherche Scientifique et de l'Innovation (tutelle IRAD)</strong></p>
+                    <ul>
+                        <li>Variétés améliorées et innovations</li>
+                        <li>Recherche agronomique appliquée</li>
+                        <li>Transfert de technologies</li>
+                        <li>Partenariats universités et écoles d'agriculture</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📐</div>
+                    <h4>ANOR</h4>
+                    <p><strong>Agence Nationale de Normalisation</strong></p>
+                    <ul>
+                        <li>Normalisation produits agro-alimentaires</li>
+                        <li>Certification qualité</li>
+                        <li>Standards emballage et étiquetage</li>
+                        <li>Traçabilité et sécurité alimentaire</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌲</div>
+                    <h4>MINFOF</h4>
+                    <p><strong>Ministère des Forêts et de la Faune</strong></p>
+                    <ul>
+                        <li>Gestion durable forêts communautaires et forêts sacrées</li>
+                        <li>Exploitation raisonnée PFNL</li>
+                        <li>Agroforesterie et reforestation</li>
+                        <li>Protection biodiversité</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h4>MINMIDT</h4>
+                    <p><strong>Ministère des Mines, de l'Industrie et du Développement Technologique</strong></p>
+                    <ul>
+                        <li>Transformation agro-industrielle</li>
+                        <li>Technologies appropriées</li>
+                        <li>Innovation et digitalisation</li>
+                        <li>Appui équipements et mécanisation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>💰 Partenaires Financiers</h3>
+            <div class="warning-box">
+                <h4>Institutions Bancaires et de Microfinance</h4>
+                <ul style="font-size: 1.05em; margin-top: 15px;">
+                    <li><strong>Afriland First Bank :</strong> Leader accompagnement secteur agricole au Cameroun, structures de micro-finance partenaires, expertise financement chaînes de valeur agro-pastorales</li>
+                    <li><strong>MC² (Mutuelles Communautaires de Croissance) :</strong> Microfinance de proximité rurale</li>
+                    <li><strong>CVECA (Caisses Villageoises d'Épargne et de Crédit Autogérées)</strong></li>
+                    <li><strong>MUCREFAB (Mutuelle de Crédit Agricole de Batchingou)</strong></li>
+                    <li><strong>Autres banques :</strong> UBA, Ecobank, CBC, BICEC (programmes agriculture)</li>
+                </ul>
+                <p style="margin-top: 20px; font-size: 1.05em;">
+                    <strong>Produits adaptés :</strong> Crédits campagne, financement équipements, garanties solidaires,
+                    épargne collective, assurance agricole paramétrique
+                </p>
+            </div>
+
+            <h3>👑 Partenaires Traditionnels & Territoriaux</h3>
+            <div class="info-box">
+                <h4>Chefferies Traditionnelles & Communes</h4>
+                <p style="font-size: 1.05em; line-height: 1.8; margin: 15px 0;">
+                    <strong>Chefferies :</strong> Partenariat naturel et essentiel. Le <strong>Haut Parrainage de Sa Majesté
+                    NANA André Flaubert</strong> (Chef Supérieur Batchingou, 12ème dynastie) symbolise l'ancrage profond
+                    dans les traditions et la légitimité coutumière du projet.
+                </p>
+                <p style="font-size: 1.05em; line-height: 1.8;">
+                    <strong>Communes du Paysage Ndoubock :</strong> Collectivités territoriales décentralisées administrant
+                    les structures déconcentrées des ministères techniques. Partenariat pour infrastructures rurales,
+                    aménagement territoire, promotion économie locale.
+                </p>
+            </div>
+
+            <h3>🏭 Partenaires Commerciaux & Entreprises</h3>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🏪</div>
+                    <h4>Distribution Moderne</h4>
+                    <ul>
+                        <li>Supermarchés (Casino, Mahima, Santa Lucia)</li>
+                        <li>Épiceries fines et boutiques bio</li>
+                        <li>Corners dédiés produits locaux</li>
+                        <li>Contrats d'approvisionnement réguliers</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🍽️</div>
+                    <h4>HORECA</h4>
+                    <ul>
+                        <li>Restaurants gastronomiques</li>
+                        <li>Hôtels et complexes touristiques</li>
+                        <li>Traiteurs événementiels</li>
+                        <li>Cantines scolaires et d'entreprises</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏭</div>
+                    <h4>Entreprises Agro-alimentaires</h4>
+                    <ul>
+                        <li>Transformation industrielle</li>
+                        <li>Conditionnement et packaging</li>
+                        <li>Logistique et distribution</li>
+                        <li>Transfert de technologies</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h4>Salons & Événements</h4>
+                    <ul>
+                        <li>Salons commerciaux et agro-industriels</li>
+                        <li>Événements sportifs et culturels</li>
+                        <li>Foires agricoles régionales</li>
+                        <li>Manifestations patrimoine Grassfields</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cosodo-hub">
+            <div class="section-header">
+                <div class="section-icon">🚀</div>
+                <h2>COSODO-HUB : Notre Bras Commercial</h2>
+                <p class="section-intro">
+                    L'interface opérationnelle entre nos producteurs et les marchés urbains
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Positionnement et Mission</h3>
+                <p style="font-size: 1.1em; line-height: 1.9;">
+                    <strong>COSODO-HUB</strong> est la branche commerciale de COSODO-CA. Mission : moderniser la distribution
+                    des produits agricoles du paysage Ndoubock en connectant directement producteurs et consommateurs,
+                    garantissant rémunération équitable, qualité certifiée, traçabilité totale et participation aux grands
+                    événements commerciaux.
+                </p>
+            </div>
+
+            <h3>📊 Projections Financières COSODO-HUB</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Activité</th>
+                            <th>An 1 (2026)</th>
+                            <th>An 2 (2027)</th>
+                            <th>An 3 (2028)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #e8f5e9;">
+                            <td><strong>Produits Frais</strong></td>
+                            <td>45M FCFA</td>
+                            <td>78M FCFA</td>
+                            <td>125M FCFA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Produits Transformés</strong></td>
+                            <td>12.6M FCFA</td>
+                            <td>22M FCFA</td>
+                            <td>38M FCFA</td>
+                        </tr>
+                        <tr style="background: #fff3e0;">
+                            <td><strong>Semences & Pépinière</strong></td>
+                            <td>23.2M FCFA</td>
+                            <td>42M FCFA</td>
+                            <td>72M FCFA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Services Techniques</strong></td>
+                            <td>4M FCFA</td>
+                            <td>13M FCFA</td>
+                            <td>30M FCFA</td>
+                        </tr>
+                        <tr style="background: #e3f2fd; font-weight: bold;">
+                            <td><strong>TOTAL CA</strong></td>
+                            <td><strong>84.8M FCFA</strong></td>
+                            <td><strong>155M FCFA</strong></td>
+                            <td><strong>265M FCFA</strong></td>
+                        </tr>
+                        <tr style="background: #c8e6c9; font-weight: bold;">
+                            <td><strong>Bénéfice Net</strong></td>
+                            <td><strong>22M FCFA</strong></td>
+                            <td><strong>47.1M FCFA</strong></td>
+                            <td><strong>88.1M FCFA</strong></td>
+                        </tr>
+                        <tr style="font-weight: bold; color: var(--primary-green);">
+                            <td><strong>ROI</strong></td>
+                            <td><strong>48%</strong></td>
+                            <td><strong>82%</strong></td>
+                            <td><strong>106%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>🛍️ Canaux de Distribution Multicanale</h3>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🏪</div>
+                    <h4>Points de Vente Physiques</h4>
+                    <ul>
+                        <li>3 boutiques COSODO-HUB (Douala, Yaoundé, Bafoussam)</li>
+                        <li>Corners dans supermarchés partenaires</li>
+                        <li>Marchés hebdomadaires bio</li>
+                        <li>Stands événementiels et salons</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h4>Plateforme E-Commerce</h4>
+                    <ul>
+                        <li>Site web + application mobile</li>
+                        <li>Commandes en ligne 24/7</li>
+                        <li>Livraison à domicile (48h)</li>
+                        <li>Paiement Mobile Money et cartes</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h4>Contrats B2B</h4>
+                    <ul>
+                        <li>20+ restaurants et hôtels</li>
+                        <li>GMS et supermarchés</li>
+                        <li>Cantines institutionnelles</li>
+                        <li>Entreprises agro-alimentaires</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h4>Export Sous-Régional</h4>
+                    <ul>
+                        <li>Marchés CEMAC (Gabon, RCA, Congo)</li>
+                        <li>Certification export (ANOR)</li>
+                        <li>Logistique transfrontalière</li>
+                        <li>Objectif : 15% CA à l'export An 3</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <div class="section-header">
+                <div class="section-icon">💡</div>
+                <h2>Projets Pilotes en Cours</h2>
+                <p class="section-intro">
+                    Des initiatives concrètes démontrant la viabilité du modèle COSODO
+                </p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🐓</div>
+                    <h4>AVI-COSODO (Aviculture)</h4>
+                    <p><strong>Lancement :</strong> Octobre 2025 (atelier pilote Batchingou)</p>
+                    <p><strong>Modèle :</strong> Nsieuh avicoles rotatifs, 3 groupes (12-15 femmes chacun)</p>
+                    <p><strong>Capacité :</strong> 1000 poussins pré-grossissement 21 jours</p>
+                    <p><strong>Résultats An 1 :</strong> 180,000 FCFA revenus/membre/an</p>
+                    <p><strong>Extension :</strong> 2 pôles additionnels prévus 2026</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🥔</div>
+                    <h4>IFEPO (Exploitations Familiales)</h4>
+                    <p><strong>Description :</strong> Projet pilote exploitations agro-pastorales familiales SM Feuh Ponkouoh</p>
+                    <p><strong>Superficie :</strong> 3 hectares (pommes de terre, plantains, bananes)</p>
+                    <p><strong>Organisations :</strong> Femmes (1ha), Jeunes (1ha), Seniors (1ha)</p>
+                    <p><strong>Production An 1 :</strong> 75 tonnes, 75M FCFA revenus</p>
+                    <p><strong>ROI :</strong> 1,460% sur investissement 4.8M FCFA</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐟</div>
+                    <h4>Éco-Pisciculture Intégrée</h4>
+                    <p><strong>Systèmes :</strong> Agro-pisciculture, aquaponie, bassins béton</p>
+                    <p><strong>Infrastructure :</strong> 1600m² bassins démo, ferme-école</p>
+                    <p><strong>Espèces :</strong> Tilapia, poisson-chat, carpe</p>
+                    <p><strong>Formation :</strong> 150 participants/an, 92% taux réussite</p>
+                    <p><strong>Intégration :</strong> Biodigesteurs, recyclage nutriments</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h4>Division Semences & Pépinière</h4>
+                    <p><strong>Infrastructure :</strong> 3 serres (200m² chacune), irrigation automatisée</p>
+                    <p><strong>Production :</strong> 95,000 plants/an (maraîchers, fruitiers, vivriers)</p>
+                    <p><strong>Semences :</strong> 8 variétés certifiées maraîchères</p>
+                    <p><strong>CA projeté An 1 :</strong> 21.7M FCFA</p>
+                    <p><strong>Impact :</strong> 300 producteurs équipés An 1</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Leçons Apprises et Capitalisation</h3>
+                <ul style="font-size: 1.05em;">
+                    <li><strong>Modèle Nsieuh modernisé :</strong> Très efficace pour mobilisation et solidarité, réduction coûts -30%</li>
+                    <li><strong>Formation technique :</strong> Essentielle pour adoption pratiques durables, taux réussite 92%</li>
+                    <li><strong>Débouchés garantis :</strong> Contrats pré-signés sécurisent investissement producteurs</li>
+                    <li><strong>Approche intégrée :</strong> Synergie agriculture-élevage-pisciculture optimise ressources</li>
+                    <li><strong>Leadership féminin :</strong> Femmes piliers de la réussite, 60% des porteurs de projets</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="adhesion">
+            <div class="section-header">
+                <div class="section-icon">🤝</div>
+                <h2>Devenir Membre de COSODO-CA</h2>
+                <p class="section-intro">
+                    Rejoignez un mouvement de transformation territoriale et d'économie solidaire
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>💰 Capital Social et Parts Sociales</h3>
+                <p style="font-size: 1.1em; line-height: 1.9;">
+                    <strong>Valeur nominale :</strong> 50,000 FCFA par part<br>
+                    <strong>Capital social minimum :</strong> 5,000,000 FCFA (100 parts)<br>
+                    <strong>Souscription minimale :</strong> 1 part pour producteurs locaux<br>
+                    <strong>Libération :</strong> Minimum 25% à la souscription, solde sur 12-36 mois<br>
+                    <strong>Rémunération :</strong> Intérêt limité (max 8%/an) + dividendes selon activité
+                </p>
+            </div>
+
+            <h3>👥 Catégories de Membres</h3>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">👨‍🌾</div>
+                    <h4>Producteurs Locaux</h4>
+                    <p><strong>Souscription :</strong> 1 part (50,000 FCFA)</p>
+                    <p><strong>Libération :</strong> 25% comptant + 75% sur 24-36 mois</p>
+                    <p><strong>Facilité :</strong> Prélèvement sur ventes via coopérative</p>
+                    <p><strong>Avantages :</strong> Intrants prix coûtant, formation gratuite, débouchés garantis</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👔</div>
+                    <h4>Investisseurs Solidaires</h4>
+                    <p><strong>Souscription :</strong> 10-100 parts (500K-5M FCFA)</p>
+                    <p><strong>Profils :</strong> Diaspora, élites, entrepreneurs, institutions</p>
+                    <p><strong>Avantages :</strong> Éligibilité gouvernance (CA), dividendes prioritaires, impact mesurable</p>
+                    <p><strong>ROI attendu :</strong> 48% An 1, 82% An 2, 106% An 3</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🛒</div>
+                    <h4>Consommateurs Solidaires</h4>
+                    <p><strong>Souscription :</strong> 1-5 parts (50K-250K FCFA)</p>
+                    <p><strong>Profil :</strong> Consommateurs engagés agriculture locale</p>
+                    <p><strong>Avantages :</strong> Tarifs préférentiels -15%, traçabilité totale, accès produits bio</p>
+                    <p><strong>Impact :</strong> Soutien direct 150+ familles producteurs</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4>💡 Affectation des Résultats (Distribution des Bénéfices)</h4>
+                <ul style="font-size: 1.05em;">
+                    <li><strong>20% - Réserve Légale</strong> (obligatoire, non distribuable, garantie pérennité)</li>
+                    <li><strong>40% - Dividendes aux Membres</strong> (proportionnel activité + parts détenues)</li>
+                    <li><strong>30% - Fonds de Développement</strong> (investissements, équipements, infrastructures)</li>
+                    <li><strong>10% - Frais de Gestion</strong> (indemnités dirigeants, fonctionnement organes)</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🌐 Pour Plus d'Informations</h3>
+                <p style="font-size: 1.15em; line-height: 1.9; text-align: center; margin-top: 20px;">
+                    <a href="https://cooperative-agricole-solidaire-de-ndoubock-cosodo.b12sites.com/"
+                       target="_blank"
+                       style="color: var(--primary-green); font-weight: 700; font-size: 1.2em; text-decoration: underline;">
+                        🌐 cooperative-agricole-solidaire-de-ndoubock-cosodo.b12sites.com
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section id="impact" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <div class="section-header">
+                <div class="section-icon">🌟</div>
+                <h2>Impact Territorial & Perspectives 2025-2030</h2>
+                <p class="section-intro">
+                    Un projet qui transforme des vies et construit l'avenir du paysage Ndoubock
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Familles Impactées</div>
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Sortie de Pauvreté</div>
+                </div>
+                <div class="stat-card" style="background: var(--gradient-accent);">
+                    <div class="stat-label">Emplois Créés</div>
+                    <div class="stat-value">150</div>
+                    <div class="stat-label">Directs & Indirects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Femmes Autonomisées</div>
+                    <div class="stat-value">60+</div>
+                    <div class="stat-label">Leadership Économique</div>
+                </div>
+                <div class="stat-card" style="background: var(--gradient-accent);">
+                    <div class="stat-label">Hectares Agro-écologie</div>
+                    <div class="stat-value">200</div>
+                    <div class="stat-label">Agriculture Durable</div>
+                </div>
+            </div>
+
+            <h3>📈 Feuille de Route Stratégique</h3>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h4>Phase 1 : Consolidation (2025-2026)</h4>
+                    <ul>
+                        <li>Finalisation immatriculation MINADER/MINPEESA</li>
+                        <li>Constitution organes définitifs (AG, CA, Comité Surveillance)</li>
+                        <li>Lancement campagne pilote 2026</li>
+                        <li>Formation 150 producteurs membres</li>
+                        <li>Installation équipements transformation</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h4>Phase 2 : Expansion (2027-2028)</h4>
+                    <ul>
+                        <li>Élargissement à 300 producteurs</li>
+                        <li>Déploiement plateforme e-commerce</li>
+                        <li>Ouverture 3 points de vente (Douala, Yaoundé, Bafoussam)</li>
+                        <li>Obtention certification bio (ECOCERT)</li>
+                        <li>20+ partenariats HORECA</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h4>Phase 3 : Diversification (2029-2030)</h4>
+                    <ul>
+                        <li>Développement élevage et pisciculture intégrés</li>
+                        <li>Centre de formation agro-écologique</li>
+                        <li>Export sous-régional (CEMAC/CEDEAO)</li>
+                        <li>Autonomie énergétique (solaire, biogaz)</li>
+                        <li>Modèle réplicable autres paysages</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section no-print">
+            <div class="section-icon" style="font-size: 4em; margin-bottom: 20px;">🌾</div>
+            <h2 style="color: white; margin-bottom: 20px;">Rejoignez le Mouvement COSODO</h2>
+            <p style="font-size: 1.3em; margin-bottom: 10px; opacity: 0.95;">
+                Ensemble, construisons la renaissance de nos terroirs
+            </p>
+            <p style="font-size: 1.1em; margin-bottom: 40px; opacity: 0.9;">
+                Producteur, investisseur solidaire ou consommateur engagé : votre place est avec nous
+            </p>
+           
+            <div class="cta-buttons">
+                <a href="tel:+237699558178" class="btn btn-primary">📞 Appeler Maintenant</a>
+                <a href="https://wa.me/237699558178?text=Bonjour, je souhaite obtenir plus d'informations sur COSODO-CA"
+                   class="btn btn-secondary" target="_blank">💬 WhatsApp</a>
+                <a href="mailto:eco2africa@gmail.com?subject=Demande d'information COSODO-CA" class="btn btn-secondary">✉️ Email</a>
+                <a href="https://cooperative-agricole-solidaire-de-ndoubock-cosodo.b12sites.com/"
+                   class="btn btn-primary" target="_blank">🌐 Site Web</a>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="footer-content">
+                <div style="font-size: 2.5em; margin-bottom: 20px;">🌾</div>
+                <h2 style="color: var(--secondary-green); font-size: 2em; margin-bottom: 10px;">COSODO-CA</h2>
+                <p style="font-size: 1.2em; margin-bottom: 10px; opacity: 0.9;">
+                    Coopérative Agricole Solidaire du Paysage Ndoubock
+                </p>
+                <p style="opacity: 0.8; margin-bottom: 40px;">avec Conseil d'Administration</p>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h4>📍 Siège Social</h4>
+                        <p>Batchingou, Commune de Bagangté</p>
+                        <p>Département du Ndé</p>
+                        <p>Région de l'Ouest-Cameroun</p>
+                        <p style="margin-top: 10px; font-style: italic;">Plateau Grassfields Méridional</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>📞 Contacts</h4>
+                        <a href="tel:+237699558178">+237 699 55 81 78</a>
+                        <a href="tel:+237653320359">+237 653 32 03 59</a>
+                        <a href="mailto:eco2africa@gmail.com">eco2africa@gmail.com</a>
+                        <a href="https://wa.me/237699558178" target="_blank">WhatsApp Business</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>👤 Coordination</h4>
+                        <p><strong>M. Jean Claude Stone NJOMKAP</strong></p>
+                        <p>Expert en Développement International</p>
+                        <p>Coordination Transitoire</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>🌐 En Ligne</h4>
+                        <a href="https://cooperative-agricole-solidaire-de-ndoubock-cosodo.b12sites.com/" target="_blank">
+                            Site Web Officiel
+                        </a>
+                        <p style="margin-top: 15px; font-size: 0.95em; opacity: 0.8;">
+                            Documentation complète, modalités d'adhésion, projets pilotes
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin: 50px 0 30px; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                    <p style="font-size: 1.3em; font-weight: 600; font-style: italic; margin-bottom: 20px;">
+                        "De la semence à la table : agriculture équitable, solidaire et durable"
+                    </p>
+                    
+                </div>
+
+                <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9em; opacity: 0.8;">
+                    <p style="margin: 10px 0;">
+                        <strong>Document Officiel</strong> - Présentation Institutionnelle COSODO-CA
+                    </p>
+                    <p style="margin: 10px 0;">
+                        © 2025 COSODO-CA - Tous droits réservés | Conforme Actes Uniformes OHADA
+                    </p>
+                    <p style="margin: 10px 0;">
+                        Version 2.0 - Juin 2025 | Projets pilotes et écosystème partenarial
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scroll pour navigation
+        document.querySelectorAll('.nav-pill').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Animation au scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(30px)';
+                    entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+
+        document.querySelectorAll('.card, .stat-card').forEach(el => observer.observe(el));
+
+        // Bouton retour en haut
+        const scrollBtn = document.createElement('button');
+        scrollBtn.innerHTML = '⬆️';
+        scrollBtn.className = 'no-print';
+        scrollBtn.style.cssText = `
+            position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px;
+            border-radius: 50%; background: var(--gradient-primary); color: white;
+            border: none; font-size: 24px; cursor: pointer;
+            box-shadow: 0 8px 20px rgba(45, 106, 79, 0.4); z-index: 1000;
+            opacity: 0; transition: opacity 0.3s, transform 0.3s; display: none;
+        `;
+        document.body.appendChild(scrollBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollBtn.style.display = 'block';
+                setTimeout(() => scrollBtn.style.opacity = '1', 10);
+            } else {
+                scrollBtn.style.opacity = '0';
+                setTimeout(() => scrollBtn.style.display = 'none', 300);
+            }
+        });
+
+        scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Barre de progression
+        const progressBar = document.createElement('div');
+        progressBar.className = 'no-print';
+        progressBar.style.cssText = `
+            position: fixed; top: 0; left: 0; height: 4px;
+            background: var(--gradient-primary); width: 0%; z-index: 9999;
+            transition: width 0.1s ease; box-shadow: 0 2px 8px rgba(45, 106, 79, 0.4);
+        `;
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            progressBar.style.width = ((winScroll / height) * 100) + '%';
+        });
+
+        // Navigation active
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-pill').forEach(link => {
+                link.style.background = 'var(--light-bg)';
+                link.style.color = 'var(--text-dark)';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.background = 'var(--gradient-primary)';
+                    link.style.color = 'var(--white)';
+                }
+            });
+        });
+
+        console.log('%c🌾 COSODO-CA - Présentation Enrichie v3.0', 'color: #2d6a4f; font-size: 20px; font-weight: bold;');
+        console.log('%cContact: eco2africa@gmail.com | +237 699 55 81 78', 'color: #5a3e2b; font-size: 14px;');
+    </script>
+</body>
+</html>
