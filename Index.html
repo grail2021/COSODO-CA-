@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2C5F2D">
+    <meta name="description" content="AVI-COSODO - Initiative pilote d'aviculture biologique familiale et communautaire solidaire - Campagne 2026">
+    <meta property="og:title" content="AVI-COSODO - Renaissance 2026">
+    <meta property="og:description" content="Soutenez l'aviculture biologique solidaire au Cameroun 🐓🌾">
+    <meta property="og:type" content="website">
+    <title>AVI-COSODO - Renaissance 2026 🐓🌾</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary: #2C5F2D;
+            --primary-light: #4A7C59;
+            --primary-dark: #1A3A1F;
+            --secondary: #D4AF37;
+            --accent: #FF6B35;
+            --success: #27AE60;
+            --warning: #FF9800;
+            --danger: #E74C3C;
+            --hope: #FFD700;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1A3A1F 0%, #2C5F2D 50%, #4A7C59 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .festive-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.15;
+            animation: sparkle 8s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.15; }
+            50% { transform: translateY(-30px) scale(1.2); opacity: 0.3; }
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.1;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-25px) rotate(8deg); }
+            66% { transform: translateY(-15px) rotate(-8deg); }
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+            padding-bottom: 70px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 95%;
+                box-shadow: var(--shadow-lg);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 98%;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .container {
+                max-width: 1400px;
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%);
+            padding: 15px 20px;
+            text-align: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .header h1 {
+            font-size: clamp(22px, 5vw, 30px);
+            margin-bottom: 6px;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            letter-spacing: 1.5px;
+        }
+
+        .header .subtitle {
+            font-size: clamp(11px, 3vw, 14px);
+            opacity: 0.95;
+            margin-bottom: 10px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .live-badge, .hope-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .live-badge {
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+        }
+
+        .hope-badge {
+            background: linear-gradient(135deg, var(--hope) 0%, var(--secondary) 100%);
+            color: var(--primary-dark);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #00FF00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 15px #00FF00;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.4); }
+        }
+
+        .hero-section {
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.15), transparent);
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .hero-section h2 {
+            color: var(--primary-dark);
+            font-size: clamp(22px, 5.5vw, 28px);
+            margin-bottom: 18px;
+            font-weight: 900;
+            line-height: 1.3;
+        }
+
+        .hero-section .highlight {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: var(--secondary);
+            text-decoration-thickness: 3px;
+        }
+
+        .hero-section p {
+            color: #555;
+            font-size: clamp(14px, 3.8vw, 17px);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 20px 18px;
+            margin: 18px 15px;
+        }
+
+        .context-banner {
+            background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+            border: 3px solid var(--secondary);
+            border-radius: 15px;
+            padding: 20px 18px;
+            margin: 18px 15px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .context-banner::before {
+            content: '💫';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 32px;
+            background: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .context-banner h3 {
+            color: var(--primary-dark);
+            font-size: clamp(18px, 4.5vw, 22px);
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .context-banner p {
+            color: #666;
+            font-size: clamp(14px, 3.5vw, 16px);
+            line-height: 1.9;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .context-banner .emotional {
+            font-weight: 700;
+            color: var(--primary);
+            font-style: italic;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid var(--secondary);
+        }
+
+        .resilience-box {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-left: 5px solid var(--success);
+            padding: 20px 18px;
+            margin: 18px 15px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .resilience-box h4 {
+            color: var(--primary);
+            font-size: clamp(17px, 4.2vw, 20px);
+            margin-bottom: 15px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .resilience-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resilience-box li {
+            padding: 10px 0 10px 35px;
+            position: relative;
+            color: #555;
+            font-size: clamp(14px, 3.5vw, 16px);
+            line-height: 1.7;
+        }
+
+        .resilience-box li:before {
+            content: "💪";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+
+        .timeline-box {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border: 3px solid var(--accent);
+            border-radius: 15px;
+            padding: 20px 18px;
+            margin: 18px 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-box h3 {
+            color: var(--primary-dark);
+            font-size: clamp(18px, 4.5vw, 22px);
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .deadline-counter {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .deadline-counter .big-date {
+            font-size: clamp(36px, 9vw, 48px);
+            font-weight: 900;
+            color: var(--accent);
+            margin: 10px 0;
+        }
+
+        .deadline-counter .date-label {
+            font-size: clamp(14px, 3.5vw, 16px);
+            color: #666;
+            font-weight: 700;
+        }
+
+        .main-counter {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: white;
+            padding: 28px 18px;
+            margin: 20px 15px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-counter::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            animation: rotate 25s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .counter-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .amount-label {
+            font-size: clamp(14px, 3.5vw, 16px);
+            opacity: 0.95;
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .amount-value {
+            font-size: clamp(44px, 10vw, 60px);
+            font-weight: 900;
+            margin: 20px 0;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .amount-suffix {
+            font-size: clamp(22px, 5vw, 28px);
+            opacity: 0.9;
+            font-weight: 700;
+        }
+
+        .goal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .goal-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .goal-item strong {
+            display: block;
+            font-size: clamp(12px, 3vw, 14px);
+            margin-bottom: 8px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .goal-item span {
+            font-size: clamp(18px, 4.5vw, 22px);
+            font-weight: 900;
+        }
+
+        .progress-section {
+            padding: 20px 15px;
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.08), transparent);
+        }
+
+        .progress-label {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            font-weight: 900;
+            font-size: clamp(15px, 4vw, 18px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            gap: 10px;
+        }
+
+        .progress-stat-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .progress-stat-value {
+            font-size: clamp(16px, 4.5vw, 22px);
+            font-weight: 900;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .progress-stat-label {
+            font-size: clamp(10px, 2.5vw, 12px);
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .progress-bar-container {
+            background: linear-gradient(to right, #E8E8E8, #F5F5F5);
+            height: 70px;
+            border-radius: 35px;
+            overflow: visible;
+            position: relative;
+            box-shadow: inset 0 4px 12px rgba(0,0,0,0.15);
+            border: 4px solid var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: 900;
+            font-size: clamp(18px, 4.5vw, 22px);
+            transition: all 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            border-radius: 35px;
+        }
+
+        .progress-bar.low {
+            background: linear-gradient(90deg, #E74C3C 0%, #C0392B 100%);
+            box-shadow: 0 0 25px rgba(231, 76, 60, 0.7);
+        }
+
+        .progress-bar.medium {
+            background: linear-gradient(90deg, #FF9800 0%, #F57C00 100%);
+            box-shadow: 0 0 25px rgba(255, 152, 0, 0.7);
+        }
+
+        .progress-bar.good {
+            background: linear-gradient(90deg, #FFC107 0%, #FFA000 100%);
+            box-shadow: 0 0 25px rgba(255, 193, 7, 0.7);
+        }
+
+        .progress-bar.high {
+            background: linear-gradient(90deg, var(--success) 0%, #3FCF8E 50%, #2ECC71 100%);
+            box-shadow: 0 0 25px rgba(39, 174, 96, 0.7);
+        }
+
+        .progress-bar.complete {
+            background: linear-gradient(90deg, #FFD700 0%, #D4AF37 100%);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
+        }
+
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255,255,255,0.2) 50%,
+                transparent 100%);
+            animation: shimmer 3s infinite;
+            border-radius: 35px;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            right: -2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 15px currentColor, inset 0 0 5px rgba(0,0,0,0.2);
+            border: 3px solid currentColor;
+            animation: pulse-indicator 2s infinite;
+        }
+
+        @keyframes pulse-indicator {
+            0%, 100% {
+                box-shadow: 0 0 15px currentColor, inset 0 0 5px rgba(0,0,0,0.2);
+                transform: translateY(-50%) scale(1);
+            }
+            50% {
+                box-shadow: 0 0 25px currentColor, inset 0 0 5px rgba(0,0,0,0.2);
+                transform: translateY(-50%) scale(1.2);
+            }
+        }
+
+        .progress-percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(20px, 5vw, 26px);
+            font-weight: 900;
+            color: var(--primary-dark);
+            text-shadow: 0 2px 4px rgba(255,255,255,0.8);
+            z-index: 10;
+            pointer-events: none;
+            background: rgba(255,255,255,0.95);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 2px solid var(--secondary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .progress-marks {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: clamp(11px, 2.8vw, 13px);
+            color: var(--primary-dark);
+            font-weight: 700;
+            gap: 5px;
+        }
+
+        .progress-milestone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .milestone-icon {
+            font-size: 18px;
+        }
+
+        .milestone-text {
+            text-align: center;
+            line-height: 1.2;
+            font-size: clamp(9px, 2.2vw, 11px);
+        }
+
+        .progress-milestones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .milestone-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+            border: 2px solid var(--primary-light);
+            border-radius: 12px;
+            padding: 12px 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .milestone-card.achieved {
+            background: linear-gradient(135deg, #D4EDDA 0%, #C3E6CB 100%);
+            border-color: var(--success);
+        }
+
+        .milestone-card.current {
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+            border-color: var(--secondary);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            animation: pulse-card 2s infinite;
+        }
+
+        @keyframes pulse-card {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .milestone-card .milestone-icon {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .milestone-card .milestone-amount {
+            font-size: clamp(11px, 2.8vw, 13px);
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .milestone-card .milestone-label {
+            font-size: clamp(9px, 2.2vw, 10px);
+            color: #666;
+            font-weight: 600;
+        }
+
+        .online-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(39, 174, 96, 0.15);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: clamp(11px, 2.8vw, 13px);
+            font-weight: 700;
+            color: var(--success);
+            border: 2px solid var(--success);
+            margin-top: 15px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .online-status.offline {
+            background: rgba(255, 152, 0, 0.15);
+            color: var(--warning);
+            border-color: var(--warning);
+        }
+
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse-status 2s infinite;
+            box-shadow: 0 0 10px var(--success);
+        }
+
+        .online-status.offline .status-indicator {
+            background: var(--warning);
+            box-shadow: 0 0 10px var(--warning);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes pulse-status {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.3); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 20px 15px;
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+            padding: 25px 15px;
+            border-radius: 18px;
+            text-align: center;
+            border: 3px solid var(--primary-light);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: clamp(32px, 8vw, 42px);
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-label {
+            font-size: clamp(11px, 2.8vw, 13px);
+            color: #666;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contribution-packages {
+            padding: 20px 15px;
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.05), transparent);
+        }
+
+        .section-title {
+            color: var(--primary-dark);
+            font-size: clamp(22px, 5.5vw, 26px);
+            font-weight: 900;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .package-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+            border: 3px solid var(--primary-light);
+            border-radius: 18px;
+            padding: 25px 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .package-card:hover::before {
+            opacity: 1;
+        }
+
+        .package-card:hover, .package-card:active {
+            transform: translateY(-10px) scale(1.03);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .package-icon {
+            font-size: 52px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-name {
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: clamp(15px, 3.8vw, 17px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-price {
+            font-size: clamp(20px, 5vw, 24px);
+            color: var(--success);
+            font-weight: 900;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-reward {
+            font-size: clamp(11px, 2.8vw, 13px);
+            color: #666;
+            font-style: italic;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contributions-feed {
+            padding: 20px 15px;
+        }
+
+        .contribution-item {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%);
+            border: 3px solid var(--primary-light);
+            border-left: 6px solid var(--success);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            animation: slideIn 0.7s ease;
+            box-shadow: var(--shadow);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .contribution-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            flex-shrink: 0;
+            box-shadow: var(--shadow);
+            border: 3px solid white;
+        }
+
+        .contribution-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .contribution-name {
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+            font-size: clamp(15px, 3.8vw, 17px);
+        }
+
+        .contribution-time {
+            font-size: clamp(11px, 2.8vw, 13px);
+            color: #777;
+            opacity: 0.9;
+        }
+
+        .contribution-note {
+            color: #666;
+            font-size: clamp(12px, 3vw, 14px);
+            margin-top: 8px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .contribution-amount {
+            font-weight: 900;
+            color: var(--success);
+            font-size: clamp(18px, 4.5vw, 22px);
+            flex-shrink: 0;
+            text-align: right;
+            padding: 10px 15px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 10px;
+        }
+
+        .contact-section, .share-section, .admin-section {
+            padding: 20px 18px;
+            margin: 18px 15px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            border: 3px solid #2196F3;
+        }
+
+        .share-section {
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+            border: 3px solid #9C27B0;
+            text-align: center;
+        }
+
+        .admin-section {
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+            border: 4px solid var(--secondary);
+        }
+
+        .contact-section h3, .share-section h3, .admin-section .admin-title {
+            color: var(--primary-dark);
+            font-size: clamp(18px, 4.5vw, 22px);
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .admin-title {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .admin-description {
+            font-size: clamp(13px, 3.2vw, 15px);
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .contact-card {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            border: 2px solid #2196F3;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-card h4 {
+            color: var(--primary);
+            font-size: clamp(15px, 3.8vw, 17px);
+            margin-bottom: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 8px;
+            color: #1976D2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: clamp(13px, 3.2vw, 15px);
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-link:hover, .contact-link:active {
+            background: rgba(33, 150, 243, 0.2);
+            transform: translateX(5px);
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: clamp(13px, 3.2vw, 15px);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            border: none;
+            cursor: pointer;
+        }
+
+        .share-btn:hover, .share-btn:active {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .share-btn.whatsapp { background: #25D366; }
+        .share-btn.facebook { background: #1877F2; }
+        .share-btn.twitter { background: #1DA1F2; }
+        .share-btn.linkedin { background: #0A66C2; }
+        .share-btn.email { background: #EA4335; }
+
+        .btn-admin {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: clamp(13px, 3.5vw, 15px);
+            cursor: pointer;
+            margin: 8px 8px 8px 0;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-admin:hover, .btn-admin:active {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        @media (max-width: 480px) {
+            .btn-admin {
+                width: calc(50% - 4px);
+                margin: 4px;
+                justify-content: center;
+            }
+        }
+
+        .contribute-cta {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--hope) 100%);
+            padding: 12px 15px;
+            text-align: center;
+            color: var(--primary-dark);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 -8px 25px rgba(0,0,0,0.25);
+            border-top: 3px solid var(--primary);
+            z-index: 50;
+        }
+
+        .contribute-cta h3 {
+            font-size: clamp(14px, 3.8vw, 18px);
+            margin-bottom: 6px;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .contribute-cta h3 {
+                display: block;
+            }
+        }
+
+        .contribute-cta p {
+            font-size: clamp(10px, 2.5vw, 12px);
+            margin-bottom: 8px;
+            opacity: 0.9;
+            line-height: 1.3;
+            font-weight: 600;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .contribute-cta p {
+                display: block;
+            }
+        }
+
+        .btn-contribute {
+            background: var(--primary-dark);
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(13px, 3.5vw, 16px);
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid white;
+        }
+
+        .btn-contribute:hover, .btn-contribute:active {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 58, 31, 0.92);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(to bottom, #FFFFFF, #F8F9FA);
+            border-radius: 20px;
+            padding: 35px 25px;
+            max-width: 550px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+            border: 4px solid var(--secondary);
+            margin: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--primary-light);
+        }
+
+        .modal-title {
+            font-size: clamp(22px, 5.5vw, 28px);
+            font-weight: 900;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            font-size: 36px;
+            cursor: pointer;
+            color: var(--primary);
+            line-height: 1;
+            padding: 0;
+            min-width: 40px;
+            min-height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            font-size: clamp(14px, 3.5vw, 16px);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 18px;
+            border: 3px solid #DDD;
+            border-radius: 12px;
+            font-size: clamp(15px, 3.8vw, 17px);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(44, 95, 45, 0.3);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+            padding: 18px;
+            background: rgba(74, 124, 89, 0.1);
+            border-radius: 12px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            cursor: pointer;
+            color: var(--primary-dark);
+            font-size: clamp(14px, 3.5vw, 16px);
+            font-weight: 600;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--success) 0%, #2ECC71 100%);
+            color: white;
+            padding: 20px;
+            border: none;
+            border-radius: 15px;
+            font-size: clamp(17px, 4.5vw, 20px);
+            font-weight: 900;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 15px;
+        }
+
+        .btn-submit:hover, .btn-submit:active {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.5);
+        }
+
+        .success-message, .error-message {
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 1.7;
+            font-size: clamp(14px, 3.5vw, 16px);
+            animation: slideIn 0.6s ease;
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #D4EDDA, #C3E6CB);
+            border: 3px solid var(--success);
+            color: #155724;
+        }
+
+        .error-message {
+            background: linear-gradient(135deg, #F8D7DA, #F5C6CB);
+            border: 3px solid var(--danger);
+            color: #721C24;
+        }
+
+        .footer-info {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: clamp(12px, 3vw, 14px);
+            line-height: 2;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .footer-info strong {
+            color: var(--secondary);
+            font-weight: 800;
+        }
+
+        .footer-info a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            .contribute-cta, .admin-section, .modal, .share-section {
+                display: none !important;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="festive-bg">
+        <div class="sparkle" style="top: 5%; left: 10%;">✨</div>
+        <div class="sparkle" style="top: 15%; right: 15%;">⭐</div>
+        <div class="sparkle" style="top: 25%; left: 20%;">💫</div>
+        <div class="sparkle" style="top: 45%; right: 10%;">✨</div>
+        <div class="sparkle" style="top: 65%; left: 15%;">⭐</div>
+        <div class="sparkle" style="top: 80%; right: 20%;">💫</div>
+        <div class="floating-icon" style="top: 10%; left: 5%;">🐣</div>
+        <div class="floating-icon" style="top: 30%; right: 8%;">🌾</div>
+        <div class="floating-icon" style="top: 50%; left: 12%;">🐓</div>
+        <div class="floating-icon" style="top: 70%; right: 10%;">🥚</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>🐓 AVI-COSODO 🌾</h1>
+            <div class="subtitle">
+                Initiative Pilote d'Aviculture Biologique Familiale et Communautaire<br>
+                Solidaire et Durable - Paysage Ndoubock
+            </div>
+            <div class="badge-container">
+                <div class="live-badge">
+                    <span class="pulse-dot"></span>
+                    <span>RELANCE 2026</span>
+                </div>
+                <div class="hope-badge">
+                    ✨ ENSEMBLE POUR LA RENAISSANCE
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-section">
+            <h2>🌟 Après la Tempête, <span class="highlight">L'Espoir Renaît</span> 🌟</h2>
+            <p>
+                Malgré les turbulences sociopolitiques et les incertitudes qui ont marqué cette fin d'année,
+                <strong>notre détermination reste intacte</strong>. L'accalmie relative nous offre une nouvelle opportunité
+                de construire ensemble l'avenir de nos familles et de nos villages.
+            </p>
+        </div>
+
+        <div class="context-banner">
+            <h3>💪 Notre Résilience Face aux Défis</h3>
+            <p>
+                Les événements de novembre et décembre 2025 ont bouleversé nos plans initiaux.
+                Les soubresauts post-électoraux, les incertitudes et les festivités de fin d'année ont ralenti notre élan.
+            </p>
+            <p>
+                Mais <strong>l'enthousiasme manifesté par les familles de Batchingou et des environs</strong> lors et après notre atelier pilote d'octobre 2025
+                reste gravé dans nos cœurs. Leur engagement témoigne d'une <strong>soif profonde de changement, de réactivation des "Nsieuh" (tontines de travail tournantes) comme véhicules de production et de productivité agro-pastorales modernes</strong>.
+            </p>
+            <p class="emotional">
+                🌱 Aujourd'hui, alors que janvier s'annonce avec la préparation des champs et le début de la campagne agricole,
+                c'est le moment idéal pour <strong>relancer notre initiative avec une force renouvelée</strong>.
+            </p>
+        </div>
+
+        <div class="resilience-box">
+            <h4>🎯 Pourquoi Continuer Maintenant ?</h4>
+            <ul>
+                <li><strong>La période post-fêtes :</strong> Les familles reprennent leurs activités avec détermination</li>
+                <li><strong>Le calendrier agricole :</strong> Janvier marque le début de la saison, moment parfait pour l'aviculture</li>
+                <li><strong>L'espoir retrouvé :</strong> L'accalmie sociale, même relative, offre un terrain favorable à la mobilisation</li>
+                <li><strong>Les besoins urgents :</strong> Nos familles au village comptent plus que jamais sur nous</li>
+                <li><strong>La promesse faite :</strong> Nous avons commencé à Batchingou, nous devons continuer !</li>
+            </ul>
+        </div>
+
+        <div class="timeline-box">
+            <h3>⏰ Nouvelle Échéance : 10 Janvier 2026</h3>
+            <div class="deadline-counter">
+                <div class="date-label">Date Limite de la Campagne</div>
+                <div class="big-date">10 JANVIER</div>
+                <div class="date-label">Mobilisons-nous avant la reprise agricole complète !</div>
+            </div>
+            <p style="text-align: center; color: #666; font-size: clamp(14px, 3.5vw, 16px); line-height: 1.8; margin-top: 15px;">
+                <strong>Janvier 2026</strong> est le mois des <strong>nouveaux départs</strong> et des <strong>résolutions</strong>.
+                Faisons d'AVI-COSODO notre résolution collective pour transformer nos villages ! 🚀
+            </p>
+        </div>
+
+        <div class="main-counter">
+            <div class="counter-content">
+                <div class="amount-label">💰 MONTANT TOTAL COLLECTÉ</div>
+                <div class="amount-value">
+                    <span id="totalRaised">278,000</span>
+                    <span class="amount-suffix">FCFA</span>
+                </div>
+                <div class="goal-grid">
+                    <div class="goal-item">
+                        <strong>Déjà Collecté</strong>
+                        <span id="collectedAmount">278,000</span> FCFA
+                    </div>
+                    <div class="goal-item">
+                        <strong>Objectif Final</strong>
+                        <span>1,500,000</span> FCFA
+                    </div>
+                    <div class="goal-item">
+                        <strong>Progression</strong>
+                        <span id="percentRaised">18.5%</span>
+                    </div>
+                    <div class="goal-item">
+                        <strong>Reste à Collecter</strong>
+                        <span id="remaining">1,222,000</span> FCFA
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-label">
+                📊 Progression de la Campagne
+            </div>
+
+            <div class="progress-stats">
+                <div class="progress-stat-item">
+                    <span class="progress-stat-value" id="progressAmount">278,000</span>
+                    <span class="progress-stat-label">Collecté</span>
+                </div>
+                <div class="progress-stat-item">
+                    <span class="progress-stat-value" id="progressPercent">18.5%</span>
+                    <span class="progress-stat-label">Atteint</span>
+                </div>
+                <div class="progress-stat-item">
+                    <span class="progress-stat-value" id="progressRemaining">1,222,000</span>
+                    <span class="progress-stat-label">Restant</span>
+                </div>
+            </div>
+           
+            <div class="progress-bar-container">
+                <div class="progress-percentage" id="progressPercentageDisplay">0%</div>
+                <div class="progress-bar low" id="progressBar"></div>
+            </div>
+
+            <div class="progress-marks">
+                <div class="progress-milestone">
+                    <span class="milestone-icon">🎯</span>
+                    <span class="milestone-text">Départ<br><strong>0</strong></span>
+                </div>
+                <div class="progress-milestone">
+                    <span class="milestone-icon">🚀</span>
+                    <span class="milestone-text">25%<br><strong>375K</strong></span>
+                </div>
+                <div class="progress-milestone">
+                    <span class="milestone-icon">⭐</span>
+                    <span class="milestone-text">50%<br><strong>750K</strong></span>
+                </div>
+                <div class="progress-milestone">
+                    <span class="milestone-icon">💪</span>
+                    <span class="milestone-text">75%<br><strong>1.1M</strong></span>
+                </div>
+                <div class="progress-milestone">
+                    <span class="milestone-icon">🏆</span>
+                    <span class="milestone-text">Objectif<br><strong>1.5M</strong></span>
+                </div>
+            </div>
+
+            <div class="progress-milestones">
+                <div class="milestone-card achieved" id="milestone-0">
+                    <div class="milestone-icon">✅</div>
+                    <span class="milestone-amount">238K</span>
+                    <span class="milestone-label">Initial</span>
+                </div>
+                <div class="milestone-card current" id="milestone-25">
+                    <div class="milestone-icon">🎯</div>
+                    <span class="milestone-amount">375K</span>
+                    <span class="milestone-label">25%</span>
+                </div>
+                <div class="milestone-card" id="milestone-50">
+                    <div class="milestone-icon">⭐</div>
+                    <span class="milestone-amount">750K</span>
+                    <span class="milestone-label">50%</span>
+                </div>
+                <div class="milestone-card" id="milestone-75">
+                    <div class="milestone-icon">💪</div>
+                    <span class="milestone-amount">1.125M</span>
+                    <span class="milestone-label">75%</span>
+                </div>
+                <div class="milestone-card" id="milestone-100">
+                    <div class="milestone-icon">🏆</div>
+                    <span class="milestone-amount">1.5M</span>
+                    <span class="milestone-label">100%</span>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="online-status" id="onlineStatus">
+                    <span class="status-indicator"></span>
+                    <span id="statusText">Mode Hors Ligne - Données Locales</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="contributorCount">12</div>
+                <div class="stat-label">Contributeurs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="daysLeft">10</div>
+                <div class="stat-label">Jours Restants</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="packagesCount">1</div>
+                <div class="stat-label">Caisses Financées</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="bagsCount">1</div>
+                <div class="stat-label">Sacs Provendes</div>
+            </div>
+        </div>
+
+        <div class="contribution-packages">
+            <h2 class="section-title">
+                <span>🎁</span> Packages de Contribution
+            </h2>
+            <div class="package-grid">
+                <div class="package-card" onclick="selectPackage(25000, 'Caisse de 50 poussins')">
+                    <div class="package-icon">🐣</div>
+                    <div class="package-name">Caisse Poussins</div>
+                    <div class="package-price">25,000 FCFA</div>
+                    <div class="package-reward">Récompense : 2-3 poulets premium</div>
+                </div>
+                <div class="package-card" onclick="selectPackage(18000, 'Sac de provende')">
+                    <div class="package-icon">🌾</div>
+                    <div class="package-name">Sac Provende</div>
+                    <div class="package-price">18,000 FCFA</div>
+                    <div class="package-reward">Récompense : 1-2 poulets de qualité</div>
+                </div>
+                <div class="package-card" onclick="selectPackage(50000, '2 Caisses de poussins')">
+                    <div class="package-icon">🐥🐥</div>
+                    <div class="package-name">Pack Double</div>
+                    <div class="package-price">50,000 FCFA</div>
+                    <div class="package-reward">Récompense : 4-6 poulets premium</div>
+                </div>
+                <div class="package-card" onclick="selectPackage(10000, 'Accessoires prophylactiques')">
+                    <div class="package-icon">💊</div>
+                    <div class="package-name">Prophylaxie</div>
+                    <div class="package-price">10,000 FCFA</div>
+                    <div class="package-reward">Récompense : 1 poulet de qualité</div>
+                </div>
+                <div class="package-card" onclick="selectPackage(5000, 'Produits naturels')">
+                    <div class="package-icon">🌿</div
+----++++++++-----+++++
+</div>
+                <div class="package-card" onclick="selectPackage(15000, 'Aménagement infrastructure')">
+                    <div class="package-icon">🏗️</div>
+                    <div class="package-name">Infrastructure</div>
+                    <div class="package-price">15,000 FCFA</div>
+                    <div class="package-reward">Récompense : 1-2 poulets premium</div>
+                </div>
+                <div class="package-card" onclick="openContributionModal()">
+                    <div class="package-icon">💝</div>
+                    <div class="package-name">Montant Libre</div>
+                    <div class="package-price">Votre Choix</div>
+                    <div class="package-reward">Récompense selon montant</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contributions-feed">
+            <h2 class="section-title">
+                <span>🌟</span> Dernières Contributions
+            </h2>
+            <div id="contributionsList">
+                <!-- Les contributions seront affichées ici dynamiquement -->
+            </div>
+        </div>
+
+        <div class="share-section">
+            <h3>📢 Partagez l'Initiative</h3>
+            <p style="margin-bottom: 20px; color: #666; font-size: clamp(13px, 3.2vw, 15px);">
+                Aidez-nous à atteindre plus de familles solidaires !
+            </p>
+            <div class="share-buttons">
+                <a href="#" class="share-btn whatsapp" onclick="shareOn('whatsapp'); return false;">
+                    <span>📱</span> WhatsApp
+                </a>
+                <a href="#" class="share-btn facebook" onclick="shareOn('facebook'); return false;">
+                    <span>👍</span> Facebook
+                </a>
+                <a href="#" class="share-btn twitter" onclick="shareOn('twitter'); return false;">
+                    <span>🐦</span> Twitter
+                </a>
+                <a href="#" class="share-btn linkedin" onclick="shareOn('linkedin'); return false;">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="#" class="share-btn email" onclick="shareOn('email'); return false;">
+                    <span>✉️</span> Email
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h3>📞 Contactez-Nous</h3>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>📧 Par Email</h4>
+                    <a href="mailto:eco2africa@gmail.com" class="contact-link">
+                        <span>✉️</span> eco2africa@gmail.com
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <h4>📱 Par Téléphone</h4>
+                    <a href="tel:+237694123456" class="contact-link">
+                        <span>📞</span> +237 694 12 34 56
+                    </a>
+                    <a href="https://wa.me/237694123456" class="contact-link">
+                        <span>💬</span> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3 class="admin-title">⚙️ Administration</h3>
+            <p class="admin-description">
+                Accès réservé aux administrateurs de l'initiative pour la gestion des contributions et le suivi de la campagne.
+            </p>
+            <div style="text-align: center;">
+                <button class="btn-admin" onclick="openAdminModal()">
+                    <span>🔐</span> Accès Admin
+                </button>
+                <button class="btn-admin" onclick="exportData()">
+                    <span>📊</span> Exporter Données
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p>
+                <strong>AVI-COSODO</strong> - Initiative Pilote d'Aviculture Biologique Familiale et Communautaire Solidaire et Durable
+            </p>
+            <p>
+                📍 Paysage Ndoubock, Région de l'Ouest - Cameroun
+            </p>
+            <p>
+                Campagne de Relance 2025-2026 | Date Limite : <strong>10 Janvier 2026</strong>
+            </p>
+            <p style="margin-top: 15px; opacity: 0.9;">
+                Développé avec 💚 pour la renaissance de nos villages
+            </p>
+        </div>
+    </div>
+
+    <div class="contribute-cta">
+        <h3>🚀 Ensemble, Réalisons le Rêve !</h3>
+        <p>Chaque contribution compte pour la renaissance de nos villages</p>
+        <button class="btn-contribute" onclick="openContributionModal()">
+            <span>💰</span> Contribuer Maintenant
+        </button>
+    </div>
+
+    <!-- Modal de Contribution -->
+    <div class="modal" id="contributionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">💰 Contribution</h2>
+                <button class="btn-close" onclick="closeModal('contributionModal')">&times;</button>
+            </div>
+            <form id="contributionForm" onsubmit="submitContribution(event)">
+                <div class="form-group">
+                    <label class="form-label">Nom Complet *</label>
+                    <input type="text" class="form-input" id="contributorName" required placeholder="Votre nom et prénom">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Téléphone / WhatsApp *</label>
+                    <input type="tel" class="form-input" id="contributorPhone" required placeholder="+237 6XX XX XX XX">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email (optionnel)</label>
+                    <input type="email" class="form-input" id="contributorEmail" placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Package Choisi</label>
+                    <select class="form-select" id="contributionPackage" onchange="updateContributionAmount()">
+                        <option value="0">Montant libre</option>
+                        <option value="25000">Caisse Poussins - 25,000 FCFA</option>
+                        <option value="18000">Sac Provende - 18,000 FCFA</option>
+                        <option value="50000">Pack Double - 50,000 FCFA</option>
+                        <option value="10000">Prophylaxie - 10,000 FCFA</option>
+                        <option value="5000">Produits Naturels - 5,000 FCFA</option>
+                        <option value="15000">Infrastructure - 15,000 FCFA</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Montant (FCFA) *</label>
+                    <input type="number" class="form-input" id="contributionAmount" required min="1000" placeholder="Minimum 1,000 FCFA">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message / Note (optionnel)</label>
+                    <input type="text" class="form-input" id="contributionNote" placeholder="Un message d'encouragement...">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="anonymousContribution">
+                    <label for="anonymousContribution">Contribution anonyme</label>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <span>✅</span> Confirmer ma Contribution
+                </button>
+                <div id="contributionMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Admin -->
+    <div class="modal" id="adminModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">🔐 Connexion Admin</h2>
+                <button class="btn-close" onclick="closeModal('adminModal')">&times;</button>
+            </div>
+            <form id="adminLoginForm" onsubmit="adminLogin(event)">
+                <div class="form-group">
+                    <label class="form-label">Mot de Passe</label>
+                    <input type="password" class="form-input" id="adminPassword" required placeholder="Entrez le mot de passe admin">
+                </div>
+                <button type="submit" class="btn-submit">
+                    <span>🔓</span> Se Connecter
+                </button>
+                <div id="adminMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Dashboard Admin -->
+    <div class="modal" id="adminDashboard">
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h2 class="modal-title">📊 Dashboard Admin</h2>
+                <button class="btn-close" onclick="closeModal('adminDashboard')">&times;</button>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <button class="btn-admin" onclick="refreshData()">
+                    <span>🔄</span> Actualiser
+                </button>
+                <button class="btn-admin" onclick="exportData()">
+                    <span>📥</span> Exporter CSV
+                </button>
+                <button class="btn-admin" onclick="resetAllData()">
+                    <span>⚠️</span> Réinitialiser
+                </button>
+            </div>
+            <div id="adminContent">
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">📈 Statistiques Globales</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" id="adminTotalAmount">0</div>
+                            <div class="stat-label">Total Collecté</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="adminContributorCount">0</div>
+                            <div class="stat-label">Contributeurs</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="adminProgress">0%</div>
+                            <div class="stat-label">Progression</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="adminRemaining">1.5M</div>
+                            <div class="stat-label">Restant</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="adminContributionsList" style="max-height: 400px; overflow-y: auto;">
+                    <!-- Liste des contributions pour admin -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // CONFIGURATION ET DONNÉES INITIALES
+        // ============================================
+       
+        const GOAL_AMOUNT = 1500000;
+        const ADMIN_PASSWORD = 'AVI2026';
+        const DEADLINE_DATE = new Date('2026-01-10T23:59:59');
+       
+        let contributions = [
+            { id: 1, name: 'U', amount: 50000, package: 'Pack Double', date: new Date('2025-10-20'), note: 'Pour la renaissance de Batchingou !', anonymous: false, phone: '+237691234567' },
+            { id: 2, name: 'Jean-Paul N.', amount: 25000, package: 'Caisse Poussins', date: new Date('2025-10-22'), note: 'Solidarité familiale', anonymous: false, phone: '+237692345678' },
+            { id: 3, name: 'Marie F.', amount: 18000, package: 'Sac Provende', date: new Date('2025-10-23'), note: '', anonymous: false, phone: '+237693456789' },
+            { id: 4, name: 'Contributeur Anonyme', amount: 30000, package: 'Montant Libre', date: new Date('2025-12-25'), note: 'Courage à tous !', anonymous: true, phone: 'Masqué' },
+            { id: 5, name: 'Patrick K.', amount: 25000, package: 'Caisse Poussins', date: new Date('2025-11-05'), note: '', anonymous: false, phone: '+237694567890' },
+            { id: 6, name: 'Sylvie D.', amount: 15000, package: 'Infrastructure', date: new Date('2025-11-10'), note: 'Pour nos villages', anonymous: false, phone: '+237695678901' },
+            { id: 7, name: 'Contributeur Anonyme', amount: 20000, package: 'Montant Libre', date: new Date('2025-11-11'), note: '', anonymous: true, phone: 'Masqué' },
+            { id: 8, name: 'Emmanuel T.', amount: 25000, package: 'Caisse Poussins', date: new Date('2025-11-15'), note: 'L\'avenir est dans nos mains', anonymous: false, phone: '+237696789012' },
+            { id: 9, name: 'Rosine M.', amount: 10000, package: 'Prophylaxie', date: new Date('2025-11-20'), note: '', anonymous: false, phone: '+237697890123' },
+            { id: 10, name: 'Famille Fomekong', amount: 50000, package: 'Pack Double', date: new Date('2025-11-21'), note: 'Ensemble pour 2026 !', anonymous: false, phone: '+237698901234' },
+            { id: 11, name: 'Jacques L.', amount: 5000, package: 'Produits Naturels', date: new Date('2025-12-02'), note: 'Petit geste, grand impact', anonymous: false, phone: '+237699012345' },
+            { id: 12, name: 'Hortense N.', amount: 10000, package: 'Montant Libre', date: new Date('2025-12-03'), note: 'Pour nos enfants', anonymous: false, phone: '+237690123456' }
+        ];
+
+        let isOnline = false;
+        let isAdminAuthenticated = false;
+
+        // ============================================
+        // FONCTIONS UTILITAIRES
+        // ============================================
+
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+        function calculateTotal() {
+            return contributions.reduce((sum, c) => sum + c.amount, 0);
+        }
+
+        function calculateProgress() {
+            const total = calculateTotal();
+            return Math.min((total / GOAL_AMOUNT) * 100, 100);
+        }
+
+        function getDaysRemaining() {
+            const now = new Date();
+            const diff = DEADLINE_DATE - now;
+            const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            return Math.max(days, 0);
+        }
+
+        function getProgressClass(percent) {
+            if (percent >= 100) return 'complete';
+            if (percent >= 75) return 'high';
+            if (percent >= 50) return 'good';
+            if (percent >= 25) return 'medium';
+            return 'low';
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function saveToLocalStorage() {
+            try {
+                const data = {
+                    contributions: contributions,
+                    lastUpdate: new Date().toISOString()
+                };
+                localStorage.setItem('aviCosodoData', JSON.stringify(data));
+                console.log('✅ Données sauvegardées localement');
+                return true;
+            } catch (e) {
+                console.error('❌ Erreur de sauvegarde:', e);
+                return false;
+            }
+        }
+
+        function loadFromLocalStorage() {
+            try {
+                const stored = localStorage.getItem('aviCosodoData');
+                if (stored) {
+                    const data = JSON.parse(stored);
+                    if (data.contributions && Array.isArray(data.contributions)) {
+                        contributions = data.contributions.map(c => ({
+                            ...c,
+                            date: new Date(c.date)
+                        }));
+                        console.log('✅ Données chargées depuis localStorage');
+                        return true;
+                    }
+                }
+            } catch (e) {
+                console.error('❌ Erreur de chargement:', e);
+            }
+            return false;
+        }
+
+        // ============================================
+        // AFFICHAGE ET MISE À JOUR UI
+        // ============================================
+
+        function updateUI() {
+            const total = calculateTotal();
+            const progress = calculateProgress();
+            const remaining = GOAL_AMOUNT - total;
+            const daysLeft = getDaysRemaining();
+
+            // Mise à jour des montants
+            document.getElementById('totalRaised').textContent = formatNumber(total);
+            document.getElementById('collectedAmount').textContent = formatNumber(total);
+            document.getElementById('remaining').textContent = formatNumber(remaining);
+            document.getElementById('percentRaised').textContent = progress.toFixed(1) + '%';
+           
+            // Mise à jour section progression
+            document.getElementById('progressAmount').textContent = formatNumber(total);
+            document.getElementById('progressPercent').textContent = progress.toFixed(1) + '%';
+            document.getElementById('progressRemaining').textContent = formatNumber(remaining);
+            document.getElementById('progressPercentageDisplay').textContent = progress.toFixed(1) + '%';
+
+            // Mise à jour barre de progression
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = progress + '%';
+            progressBar.className = 'progress-bar ' + getProgressClass(progress);
+            progressBar.textContent = progress >= 10 ? progress.toFixed(1) + '%' : '';
+
+            // Mise à jour jalons
+            updateMilestones(progress);
+
+            // Mise à jour statistiques
+            document.getElementById('contributorCount').textContent = contributions.length;
+            document.getElementById('daysLeft').textContent = daysLeft;
+           
+            const caisses = contributions.filter(c => c.package.includes('Caisse')).length;
+            const sacs = contributions.filter(c => c.package.includes('Provende')).length;
+            document.getElementById('packagesCount').textContent = caisses;
+            document.getElementById('bagsCount').textContent = sacs;
+
+            // Statut en ligne/hors ligne
+            const statusEl = document.getElementById('onlineStatus');
+            const statusText = document.getElementById('statusText');
+            if (isOnline) {
+                statusEl.className = 'online-status';
+                statusText.textContent = 'Synchronisé - Données à jour';
+            } else {
+                statusEl.className = 'online-status offline';
+                statusText.textContent = 'Mode Hors Ligne - Données Locales';
+            }
+
+            // Afficher les contributions
+            displayContributions();
+        }
+
+        function updateMilestones(progress) {
+            const milestones = [
+                { id: 'milestone-0', threshold: 0 },
+                { id: 'milestone-25', threshold: 25 },
+                { id: 'milestone-50', threshold: 50 },
+                { id: 'milestone-75', threshold: 75 },
+                { id: 'milestone-100', threshold: 100 }
+            ];
+
+            milestones.forEach(milestone => {
+                const el = document.getElementById(milestone.id);
+                if (el) {
+                    el.className = 'milestone-card';
+                    if (progress >= milestone.threshold) {
+                        el.classList.add('achieved');
+                    }
+                    if (progress >= milestone.threshold && progress < milestone.threshold + 25) {
+                        el.classList.add('current');
+                    }
+                }
+            });
+        }
+
+        function displayContributions() {
+            const container = document.getElementById('contributionsList');
+            if (!container) return;
+
+            const sortedContributions = [...contributions].sort((a, b) => b.date - a.date);
+            const recentContributions = sortedContributions.slice(0, 10);
+
+            if (recentContributions.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #999;">
+                        <div style="font-size: 48px; margin-bottom: 15px;">🎯</div>
+                        <p>Aucune contribution pour le moment.</p>
+                        <p style="margin-top: 10px;">Soyez le premier à contribuer !</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = recentContributions.map(c => `
+                <div class="contribution-item">
+                    <div class="contribution-avatar">
+                        ${c.anonymous ? '🎭' : (c.name.charAt(0).toUpperCase())}
+                    </div>
+                    <div class="contribution-details">
+                        <div class="contribution-name">
+                            ${escapeHtml(c.anonymous ? 'Contributeur Anonyme' : c.name)}
+                        </div>
+                        <div class="contribution-time">
+                            ${c.date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                            • ${escapeHtml(c.package)}
+                        </div>
+                        ${c.note ? `<div class="contribution-note">"${escapeHtml(c.note)}"</div>` : ''}
+                    </div>
+                    <div class="contribution-amount">
+                        ${formatNumber(c.amount)} F
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ============================================
+        // GESTION DES MODALS
+        // ============================================
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function openContributionModal() {
+            openModal('contributionModal');
+            trackEvent('open_contribution_modal');
+        }
+
+        function openAdminModal() {
+            openModal('adminModal');
+            trackEvent('open_admin_modal');
+        }
+
+        // ============================================
+        // GESTION DES CONTRIBUTIONS
+        // ============================================
+
+        function selectPackage(amount, packageName) {
+            openContributionModal();
+            document.getElementById('contributionAmount').value = amount;
+            const packageSelect = document.getElementById('contributionPackage');
+            for (let option of packageSelect.options) {
+                if (option.value == amount) {
+                    packageSelect.value = amount;
+                    break;
+                }
+            }
+            trackEvent('select_package', { package: packageName, amount: amount });
+        }
+
+        function updateContributionAmount() {
+            const packageSelect = document.getElementById('contributionPackage');
+            const amountInput = document.getElementById('contributionAmount');
+            const selectedValue = packageSelect.value;
+           
+            if (selectedValue !== '0') {
+                amountInput.value = selectedValue;
+            }
+        }
+
+        function submitContribution(event) {
+            event.preventDefault();
+           
+            const name = document.getElementById('contributorName').value.trim();
+            const phone = document.getElementById('contributorPhone').value.trim();
+            const email = document.getElementById('contributorEmail').value.trim();
+            const packageSelect = document.getElementById('contributionPackage');
+            const packageName = packageSelect.options[packageSelect.selectedIndex].text;
+            const amount = parseInt(document.getElementById('contributionAmount').value);
+            const note = document.getElementById('contributionNote').value.trim();
+            const anonymous = document.getElementById('anonymousContribution').checked;
+
+            if (!name || !phone || !amount || amount < 1000) {
+                showMessage('contributionMessage', 'Veuillez remplir tous les champs obligatoires. Montant minimum : 1,000 FCFA', 'error');
+                return;
+            }
+
+            const newContribution = {
+                id: contributions.length + 1,
+                name: name,
+                phone: phone,
+                email: email,
+                amount: amount,
+                package: packageName,
+                note: note,
+                anonymous: anonymous,
+                date: new Date()
+            };
+
+            contributions.push(newContribution);
+            saveToLocalStorage();
+            updateUI();
+
+            showMessage('contributionMessage',
+                `🎉 Merci ${anonymous ? '' : name} ! Votre contribution de ${formatNumber(amount)} FCFA a été enregistrée avec succès.<br><br>
+                📞 Vous serez contacté sous peu pour finaliser le paiement.<br><br>
+                💚 Ensemble, nous construisons l'avenir de nos villages !`,
+                'success'
+            );
+
+            document.getElementById('contributionForm').reset();
+            trackEvent('submit_contribution', { amount: amount, package: packageName });
+
+            setTimeout(() => {
+                closeModal('contributionModal');
+            }, 4000);
+        }
+
+        function showMessage(elementId, message, type) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.className = type === 'success' ? 'success-message' : 'error-message';
+                element.innerHTML = message;
+                element.style.display = 'block';
+            }
+        }
+
+        // ============================================
+        // ADMINISTRATION
+        // ============================================
+
+        function adminLogin(event) {
+            event.preventDefault();
+           
+            const password = document.getElementById('adminPassword').value;
+           
+            if (password === ADMIN_PASSWORD) {
+                isAdminAuthenticated = true;
+                closeModal('adminModal');
+                openAdminDashboard();
+                trackEvent('admin_login_success');
+            } else {
+                showMessage('adminMessage', '❌ Mot de passe incorrect. Accès refusé.', 'error');
+                trackEvent('admin_login_failed');
+            }
+        }
+
+        function openAdminDashboard() {
+            if (!isAdminAuthenticated) {
+                openAdminModal();
+                return;
+            }
+
+            updateAdminDashboard();
+            openModal('adminDashboard');
+        }
+
+        function updateAdminDashboard() {
+            const total = calculateTotal();
+            const progress = calculateProgress();
+            const remaining = GOAL_AMOUNT - total;
+
+            document.getElementById('adminTotalAmount').textContent = formatNumber(total) + ' F';
+            document.getElementById('adminContributorCount').textContent = contributions.length;
+            document.getElementById('adminProgress').textContent = progress.toFixed(1) + '%';
+            document.getElementById('adminRemaining').textContent = formatNumber(remaining) + ' F';
+
+            const listContainer = document.getElementById('adminContributionsList');
+            const sortedContributions = [...contributions].sort((a, b) => b.date - a.date);
+
+            listContainer.innerHTML = `
+                <h3 style="color: var(--primary); margin-bottom: 15px;">📋 Liste Complète des Contributions</h3>
+                ${sortedContributions.map((c, index) => `
+                    <div class="contribution-item" style="border-left-color: ${c.anonymous ? '#9C27B0' : 'var(--success)'};">
+                        <div class="contribution-avatar" style="background: ${c.anonymous ? 'linear-gradient(135deg, #9C27B0, #BA68C8)' : 'linear-gradient(135deg, var(--primary), var(--primary-light))'};">
+                            ${c.anonymous ? '🎭' : (c.name.charAt(0).toUpperCase())}
+                        </div>
+                        <div class="contribution-details">
+                            <div class="contribution-name">
+                                #${sortedContributions.length - index} - ${escapeHtml(c.anonymous ? 'Anonyme' : c.name)}
+                            </div>
+                            <div class="contribution-time">
+                                📞 ${escapeHtml(c.anonymous ? 'Masqué' : c.phone)} •
+                                📅 ${c.date.toLocaleDateString('fr-FR')} ${c.date.toLocaleTimeString('fr-FR', {hour: '2-digit', minute: '2-digit'})}
+                            </div>
+                            <div class="contribution-time">
+                                📦 ${escapeHtml(c.package)}
+                                ${c.email ? ` • ✉️ ${escapeHtml(c.email)}` : ''}
+                            </div>
+                            ${c.note ? `<div class="contribution-note">"${escapeHtml(c.note)}"</div>` : ''}
+                        </div>
+                        <div class="contribution-amount">
+                            ${formatNumber(c.amount)} F
+                        </div>
+                    </div>
+                `).join('')}
+            `;
+        }
+
+        function refreshData() {
+            updateUI();
+            if (isAdminAuthenticated) {
+                updateAdminDashboard();
+            }
+            showNotification('✅ Données actualisées !');
+            trackEvent('refresh_data');
+        }
+
+        function exportData() {
+            try {
+                let csv = 'ID,Date,Heure,Nom,Téléphone,Email,Package,Montant,Note,Anonyme\n';
+               
+                contributions.forEach(c => {
+                    const row = [
+                        c.id,
+                        c.date.toLocaleDateString('fr-FR'),
+                        c.date.toLocaleTimeString('fr-FR'),
+                        c.name.replace(/,/g, ';'),
+                        c.phone,
+                        c.email || '',
+                        c.package.replace(/,/g, ';'),
+                        c.amount,
+                        (c.note || '').replace(/,/g, ';'),
+                        c.anonymous ? 'Oui' : 'Non'
+                    ];
+                    csv += row.join(',') + '\n';
+                });
+
+                csv += `\n\nRÉSUMÉ\n`;
+                csv += `Total Collecté,${calculateTotal()} FCFA\n`;
+                csv += `Objectif,${GOAL_AMOUNT} FCFA\n`;
+                csv += `Progression,
+--+++---------+---++++++++++--------++
+${calculateProgress().toFixed(2)}%\n`;
+                csv += `Nombre de contributeurs,${contributions.length}\n`;
+                csv += `Date d'export,${new Date().toLocaleString('fr-FR')}\n`;
+
+                const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+                const link = document.createElement('a');
+                const url = URL.createObjectURL(blob);
+               
+                link.setAttribute('href', url);
+                link.setAttribute('download', `AVI-COSODO_Export_${new Date().toISOString().split('T')[0]}.csv`);
+                link.style.visibility = 'hidden';
+               
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+               
+                showNotification('📊 Export CSV réussi !');
+                trackEvent('export_data', { count: contributions.length });
+            } catch (e) {
+                console.error('Erreur lors de l\'export:', e);
+                showNotification('❌ Erreur lors de l\'export', 'error');
+            }
+        }
+
+        function resetAllData() {
+            if (!isAdminAuthenticated) {
+                showNotification('❌ Accès non autorisé', 'error');
+                return;
+            }
+
+            const confirmed = confirm(
+                '⚠️ ATTENTION !\n\n' +
+                'Cette action va SUPPRIMER DÉFINITIVEMENT toutes les contributions.\n\n' +
+                'Voulez-vous vraiment continuer ?'
+            );
+
+            if (!confirmed) return;
+
+            const doubleConfirm = confirm(
+                '⚠️ DERNIÈRE CONFIRMATION !\n\n' +
+                'Êtes-vous ABSOLUMENT SÛR de vouloir réinitialiser toutes les données ?\n\n' +
+                'Cette action est IRRÉVERSIBLE !'
+            );
+
+            if (!doubleConfirm) return;
+
+            contributions = [];
+            saveToLocalStorage();
+            updateUI();
+            updateAdminDashboard();
+           
+            showNotification('🔄 Données réinitialisées');
+            trackEvent('reset_all_data');
+        }
+
+        // ============================================
+        // PARTAGE SOCIAL
+        // ============================================
+
+        function shareOn(platform) {
+            const url = window.location.href;
+            const title = 'AVI-COSODO - Renaissance 2026';
+            const text = `🐓🌾 Soutenez l'initiative AVI-COSODO !\n\nAviculture biologique solidaire au Cameroun.\n\n💰 Objectif: 1,500,000 FCFA\n✅ Déjà collecté: ${formatNumber(calculateTotal())} FCFA\n📅 Date limite: 10 Janvier 2026\n\nChaque contribution compte ! 💚`;
+
+            let shareUrl = '';
+
+            switch(platform) {
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${encodeURIComponent(text + '\n\n' + url)}`;
+                    break;
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+                    break;
+                case 'email':
+                    shareUrl = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(text + '\n\n' + url)}`;
+                    break;
+            }
+
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+                trackEvent('share', { platform: platform });
+            }
+        }
+
+        // ============================================
+        // NOTIFICATIONS
+        // ============================================
+
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? 'linear-gradient(135deg, #27AE60, #2ECC71)' : 'linear-gradient(135deg, #E74C3C, #C0392B)'};
+                color: white;
+                padding: 18px 24px;
+                border-radius: 12px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+                z-index: 10000;
+                font-weight: 700;
+                font-size: 15px;
+                max-width: 350px;
+                animation: slideIn 0.5s ease;
+                border: 2px solid rgba(255,255,255,0.3);
+            `;
+            notification.textContent = message;
+           
+            document.body.appendChild(notification);
+           
+            setTimeout(() => {
+                notification.style.animation = 'fadeOut 0.5s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 500);
+            }, 3000);
+        }
+
+        // ============================================
+        // ANALYTICS & TRACKING
+        // ============================================
+
+        function trackEvent(eventName, data = {}) {
+            console.log('📊 Event:', eventName, data);
+            // Ici vous pouvez ajouter votre code d'analytics (Google Analytics, etc.)
+        }
+
+        // ============================================
+        // GESTION DES ERREURS
+        // ============================================
+
+        window.addEventListener('error', function(e) {
+            console.error('❌ Erreur globale:', e.error);
+            trackEvent('error', { message: e.message, filename: e.filename, line: e.lineno });
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('❌ Promise rejetée:', e.reason);
+            trackEvent('unhandled_rejection', { reason: e.reason });
+        });
+
+        // ============================================
+        // RACCOURCIS CLAVIER
+        // ============================================
+
+        document.addEventListener('keydown', function(e) {
+            // Echap pour fermer les modals
+            if (e.key === 'Escape') {
+                ['contributionModal', 'adminModal', 'adminDashboard'].forEach(modalId => {
+                    const modal = document.getElementById(modalId);
+                    if (modal && modal.classList.contains('active')) {
+                        closeModal(modalId);
+                    }
+                });
+            }
+
+            // Ctrl/Cmd + S pour sauvegarder
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                saveToLocalStorage();
+                showNotification('💾 Données sauvegardées !');
+            }
+
+            // Ctrl/Cmd + E pour exporter
+            if ((e.ctrlKey || e.metaKey) && e.key === 'e' && isAdminAuthenticated) {
+                e.preventDefault();
+                exportData();
+            }
+
+            // Ctrl/Cmd + K pour ouvrir modal contribution
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                openContributionModal();
+            }
+        });
+
+        // ============================================
+        // OPTIMISATIONS PERFORMANCE
+        // ============================================
+
+        // Debounce pour le redimensionnement
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                updateUI();
+            }, 250);
+        });
+
+        // Scroll optimisé
+        let scrolling = false;
+        window.addEventListener('scroll', function() {
+            if (!scrolling) {
+                window.requestAnimationFrame(function() {
+                    // Actions lors du scroll si nécessaire
+                    scrolling = false;
+                });
+                scrolling = true;
+            }
+        });
+
+        // Nettoyage périodique
+        setInterval(function() {
+            const notifications = document.querySelectorAll('[style*="position: fixed"]');
+            notifications.forEach(notif => {
+                const opacity = window.getComputedStyle(notif).opacity;
+                if (opacity === '0') {
+                    notif.remove();
+                }
+            });
+        }, 60000); // Toutes les 60 secondes
+
+        // ============================================
+        // SUPPORT PWA (Progressive Web App)
+        // ============================================
+
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            console.log('💡 Application installable détectée');
+        });
+
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('✅ Application installée');
+                        trackEvent('app_installed');
+                    }
+                    deferredPrompt = null;
+                });
+            }
+        }
+
+        // ============================================
+        // OPTIMISATIONS MOBILE
+        // ============================================
+
+        // Détection du type d'appareil
+        function detectDevice() {
+            const ua = navigator.userAgent;
+            if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+                return 'tablet';
+            }
+            if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+                return 'mobile';
+            }
+            return 'desktop';
+        }
+
+        const deviceType = detectDevice();
+        console.log('📱 Type d\'appareil:', deviceType);
+
+        // Gestion de l'orientation
+        if (window.matchMedia) {
+            const orientationQuery = window.matchMedia('(orientation: portrait)');
+            orientationQuery.addListener(function(m) {
+                if (m.matches) {
+                    console.log('📱 Mode portrait');
+                } else {
+                    console.log('📱 Mode paysage');
+                }
+            });
+        }
+
+        // Optimisation pour économie de batterie
+        if ('getBattery' in navigator) {
+            navigator.getBattery().then(function(battery) {
+                if (battery.level < 0.2) {
+                    console.log('🔋 Batterie faible - Mode économie');
+                }
+            });
+        }
+
+        // Auto-scroll vers input sur focus (mobile)
+        if (deviceType === 'mobile') {
+            document.querySelectorAll('input, textarea, select').forEach(element => {
+                element.addEventListener('focus', function() {
+                    setTimeout(() => {
+                        this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                });
+            });
+        }
+
+        // ============================================
+        // INITIALISATION AU CHARGEMENT
+        // ============================================
+
+        function initialize() {
+            console.log('🚀 Initialisation AVI-COSODO v2.5.0');
+           
+            // Charger les données sauvegardées
+            loadFromLocalStorage();
+           
+            // Mettre à jour l'interface
+            updateUI();
+           
+            // Vérifier la connexion
+            if (navigator.onLine) {
+                isOnline = true;
+                console.log('🌐 Connexion internet détectée');
+            } else {
+                isOnline = false;
+                console.log('📴 Mode hors ligne');
+            }
+
+            // Listener pour changement de connexion
+            window.addEventListener('online', function() {
+                isOnline = true;
+                updateUI();
+                showNotification('🌐 Connexion rétablie !');
+            });
+
+            window.addEventListener('offline', function() {
+                isOnline = false;
+                updateUI();
+                showNotification('📴 Mode hors ligne', 'error');
+            });
+
+            // Animation de la barre de progression
+            setTimeout(function() {
+                const progress = calculateProgress();
+                const progressBar = document.getElementById('progressBar');
+                progressBar.style.width = progress + '%';
+            }, 500);
+
+            // Message de bienvenue
+            setTimeout(function() {
+                showNotification('🎉 Bienvenue sur AVI-COSODO Renaissance 2026 !');
+            }, 2000);
+
+            // Prévenir la fermeture accidentelle
+            window.addEventListener('beforeunload', function(e) {
+                saveToLocalStorage();
+            });
+
+            // Focus accessibility
+            document.querySelectorAll('button, a, input, select, textarea').forEach(element => {
+                element.addEventListener('focus', function() {
+                    this.style.outline = '3px solid var(--secondary)';
+                    this.style.outlineOffset = '2px';
+                });
+                element.addEventListener('blur', function() {
+                    this.style.outline = '';
+                    this.style.outlineOffset = '';
+                });
+            });
+
+            // Logs de validation finale
+            console.log('✅ Initialisation complète');
+            console.log('📊 Total collecté:', formatNumber(calculateTotal()), 'FCFA');
+            console.log('🎯 Objectif:', formatNumber(GOAL_AMOUNT), 'FCFA');
+            console.log('👥 Contributeurs:', contributions.length);
+            console.log('⏰ Date limite:', DEADLINE_DATE.toLocaleDateString('fr-FR'));
+            console.log('🚀 Application prête pour production !');
+        }
+
+        // Chargement différé pour optimiser les performances
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initialize);
+        } else {
+            // Utiliser requestIdleCallback si disponible
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(initialize);
+            } else {
+                setTimeout(initialize, 1);
+            }
+        }
+
+        // ============================================
+        // FERMETURE DU CODE
+        // ============================================
+
+        console.log('📜 Script AVI-COSODO chargé avec succès');
+        console.log('💚 Version 2.5.0 - Renaissance 2026');
+        console.log('🐓🌾 Pour la renaissance de nos villages !');
+    </script>
+</body>
+</html>
